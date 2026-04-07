@@ -2827,7 +2827,7 @@
       background: rgba(255, 255, 255, 0.06);
       display: grid;
       place-items: center;
-      color: #64748B;
+      color: #ffffff;
       font-size: 1rem;
       transition: background 0.2s, color 0.2s;
     }
