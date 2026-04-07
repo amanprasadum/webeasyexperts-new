@@ -2720,7 +2720,7 @@
       flex: 1;
       min-width: 160px;
       padding: 0.7rem 1rem;
-      background: rgba(255, 255, 255, 0.06);
+      background: rgb(255, 255, 255);
       border: 1.5px solid rgba(255, 255, 255, 0.1);
       border-radius: 10px;
       font-family: var(--body);
