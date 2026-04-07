@@ -2819,7 +2819,9 @@
       font-size: 0.8rem;
       color: #475569;
     }
-
+    .footer-bottom span{
+      color: #c7c7c7;
+    }
     .social-icon {
       width: 36px;
       height: 36px;
