@@ -2704,9 +2704,9 @@
     }
 
     .callback-strip p {
-      font-size: 0.85rem;
-      color: #64748B;
-      margin-bottom: 0;
+     font-size: 0.85rem;
+    color: #c9d3e1;
+    margin-bottom: 0;
     }
 
     .callback-form {
