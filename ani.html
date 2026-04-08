@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — Web EASY Experts</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --red: #E53935;
+      --red-lt: #FFEBEE;
+      --red-dk: #B71C1C;
+      --bg: #F8FAFC;
+      --white: #FFFFFF;
+      --subtle: #F1F5F9;
+      --t900: #0F172A;
+      --t700: #334155;
+      --t500: #64748B;
+      --t300: #CBD5E1;
+      --border: #E2E8F0;
+      --display: 'Plus Jakarta Sans', sans-serif;
+      --body: 'Inter', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body);
+      background: var(--bg);
+      color: var(--t700);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── TYPOGRAPHY HELPERS ─── */
+    .wae-section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: var(--red-lt);
+      border: 1px solid rgba(229,57,53,0.2);
+      border-radius: 100px;
+      padding: 5px 14px;
+      margin-bottom: 18px;
+    }
+    .wae-section-label .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--red);
+      display: inline-block;
+    }
+    .wae-display-title {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      font-weight: 800;
+      color: var(--t900);
+      line-height: 1.15;
+    }
+    .wae-display-title span { color: var(--red); }
+    .wae-display-title-white {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+    }
+    .wae-display-title-white span { color: var(--red); }
+    .wae-body-lead {
+      font-size: 1.0625rem;
+      color: var(--t500);
+      line-height: 1.8;
+      max-width: 640px;
+    }
+    .wae-body-lead-white {
+      font-size: 1.0625rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+    }
+    .wae-divider {
+      width: 56px; height: 4px;
+      background: linear-gradient(90deg, var(--red), var(--red-dk));
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .wae-divider-center { margin-left: auto; margin-right: auto; }
+
+    /* ─── HERO ─── */
+    .wae-about-hero {
+      background: var(--t900);
+      position: relative;
+      padding: 120px 0 90px;
+      overflow: hidden;
+    }
+    .wae-about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 700px 500px at 20% 60%, rgba(229,57,53,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 500px 400px at 80% 20%, rgba(229,57,53,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    /* subtle grid lines */
+    .wae-about-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .wae-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(229,57,53,0.12);
+      border: 1px solid rgba(229,57,53,0.3);
+      color: #FF8A80;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+    .wae-hero-badge .pulse {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 0 0 rgba(229,57,53,0.5);
+      animation: wae-pulse 2s ease-in-out infinite;
+    }
+    @keyframes wae-pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(229,57,53,0.5); }
+      50%      { box-shadow: 0 0 0 6px rgba(229,57,53,0); }
+    }
+    .wae-hero-title {
+      font-family: var(--display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+    .wae-hero-title span { color: var(--red); }
+    .wae-hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+      max-width: 560px;
+    }
+    .wae-hero-scroll-hint {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-top: 48px;
+    }
+    .wae-hero-scroll-hint .line {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* hero side decoration */
+    .wae-hero-deco {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wae-hero-deco-ring {
+      width: 340px; height: 340px;
+      border-radius: 50%;
+      border: 1px solid rgba(229,57,53,0.2);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      animation: wae-spin-slow 20s linear infinite;
+    }
+    @keyframes wae-spin-slow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .wae-hero-deco-ring::before {
+      content: '';
+      position: absolute;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      border: 1px dashed rgba(229,57,53,0.15);
+    }
+    .wae-hero-deco-center {
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(229,57,53,0.15), rgba(183,28,28,0.08));
+      border: 1px solid rgba(229,57,53,0.3);
+      display: flex; align-items: center; justify-content: center;
+      animation: wae-spin-slow 20s linear infinite reverse;
+    }
+    .wae-hero-deco-center i {
+      font-size: 3.5rem;
+      color: var(--red);
+      opacity: 0.85;
+    }
+    .wae-deco-orbit {
+      position: absolute;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--t900);
+      border: 2px solid rgba(229,57,53,0.5);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.95rem;
+    }
+    .wae-deco-orbit:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+    .wae-deco-orbit:nth-child(2) { bottom: 0; left: 50%; transform: translateX(-50%); }
+    .wae-deco-orbit:nth-child(3) { left: 0; top: 50%; transform: translateY(-50%); }
+    .wae-deco-orbit:nth-child(4) { right: 0; top: 50%; transform: translateY(-50%); }
+
+    /* ─── STORY ─── */
+    .wae-story-section {
+      padding: 100px 0;
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .wae-story-section::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(229,57,53,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .wae-story-img-wrap {
+      position: relative;
+    }
+    .wae-story-img-main {
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--t900) 0%, #1E293B 100%);
+      height: 420px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .wae-story-img-main::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 30% 70%, rgba(229,57,53,0.2) 0%, transparent 60%),
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: auto, 40px 40px, 40px 40px;
+      border-radius: 20px;
+    }
+    .wae-story-img-content {
+      position: relative; z-index: 2;
+      text-align: center;
+    }
+    .wae-story-img-content .big-num {
+      font-family: var(--display);
+      font-size: 6rem;
+      font-weight: 800;
+      color: rgba(229,57,53,0.15);
+      line-height: 1;
+    }
+    .wae-story-img-content .big-label {
+      font-family: var(--display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+    }
+    .wae-story-badge-float {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      background: var(--red);
+      color: #fff;
+      border-radius: 16px;
+      padding: 16px 20px;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(229,57,53,0.4);
+      z-index: 3;
+    }
+    .wae-story-badge-float .num {
+      font-family: var(--display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .wae-story-badge-float .lbl {
+      font-size: 0.7rem;
+      font-weight: 600;
+      opacity: 0.9;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .wae-story-badge-float2 {
+      position: absolute;
+      top: -20px; left: -20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex; align-items: center; gap: 10px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      z-index: 3;
+    }
+    .wae-story-badge-float2 i {
+      font-size: 1.5rem;
+      color: var(--red);
+    }
+    .wae-story-badge-float2 .txt strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--t900);
+    }
+    .wae-story-badge-float2 .txt span {
+      font-size: 0.72rem;
+      color: var(--t500);
+    }
+    .wae-story-text p {
+      font-size: 1.0625rem;
+      color: var(--t500);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .wae-story-text p:last-child { margin-bottom: 0; }
+    .wae-highlight-inline {
+      color: var(--red);
+      font-weight: 600;
+    }
+
+    /* ─── MISSION VISION ─── */
+    .wae-mv-section {
+      padding: 100px 0;
+      background: var(--bg);
+      position: relative;
+    }
+    .wae-mv-card {
+      border-radius: 20px;
+      padding: 40px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .wae-mv-card:hover {
+      transform: translateY(-6px);
+    }
+    .wae-mv-card.mission {
+      background: var(--t900);
+      box-shadow: 0 20px 60px rgba(15,23,42,0.3);
+    }
+    .wae-mv-card.vision {
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+    }
+    .wae-mv-card.mission::before {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(229,57,53,0.2) 0%, transparent 70%);
+    }
+    .wae-mv-icon {
+      width: 60px; height: 60px;
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 24px;
+    }
+    .mission .wae-mv-icon { background: rgba(229,57,53,0.15); color: var(--red); }
+    .vision .wae-mv-icon { background: var(--red-lt); color: var(--red); }
+    .wae-mv-card h3 {
+      font-family: var(--display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .mission h3 { color: #fff; }
+    .vision h3 { color: var(--t900); }
+    .wae-mv-card p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .mission p { color: rgba(255,255,255,0.7); }
+    .vision p { color: var(--t500); }
+    .wae-mv-tagline {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .mission .wae-mv-tagline {
+      color: var(--red);
+      background: rgba(229,57,53,0.1);
+      border: 1px solid rgba(229,57,53,0.25);
+      border-radius: 100px;
+      padding: 4px 14px;
+    }
+    .vision .wae-mv-tagline {
+      color: var(--red);
+      background: var(--red-lt);
+      border: 1px solid rgba(229,57,53,0.2);
+      border-radius: 100px;
+      padding: 4px 14px;
+    }
+
+    /* ─── VALUES ─── */
+    .wae-values-section {
+      padding: 100px 0;
+      background: var(--t900);
+      position: relative;
+      overflow: hidden;
+    }
+    .wae-values-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+    .wae-values-section::after {
+      content: '';
+      position: absolute;
+      top: -120px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(229,57,53,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .wae-value-card {
+      border-radius: 18px;
+      padding: 32px 28px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: all 0.35s ease;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .wae-value-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--red), transparent);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+    .wae-value-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(229,57,53,0.3);
+      transform: translateY(-4px);
+    }
+    .wae-value-card:hover::before { opacity: 1; }
+    .wae-value-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(229,57,53,0.12);
+      border: 1px solid rgba(229,57,53,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+    .wae-value-card h4 {
+      font-family: var(--display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .wae-value-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* ─── STATS ─── */
+    .wae-about-stats {
+      padding: 80px 0;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .wae-stat-item {
+      text-align: center;
+      padding: 20px;
+    }
+    .wae-stat-item .num {
+      font-family: var(--display);
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--t900);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .wae-stat-item .num span { color: var(--red); }
+    .wae-stat-item .lbl {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--t500);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .wae-stat-divider {
+      width: 1px;
+      background: var(--border);
+      height: 60px;
+      align-self: center;
+    }
+
+    /* ─── TEAM ─── */
+    .wae-team-section {
+      padding: 100px 0;
+      background: var(--bg);
+    }
+    .wae-team-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+      transition: all 0.35s ease;
+      text-align: center;
+    }
+    .wae-team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.1);
+      border-color: rgba(229,57,53,0.2);
+    }
+    .wae-team-avatar {
+      height: 220px;
+      background: linear-gradient(135deg, #1E293B 0%, var(--t900) 100%);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .wae-team-avatar::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 50%;
+      background: linear-gradient(to top, rgba(229,57,53,0.1), transparent);
+    }
+    .wae-team-avatar .initials {
+      font-family: var(--display);
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: rgba(229,57,53,0.6);
+      position: relative; z-index: 2;
+      letter-spacing: -0.02em;
+    }
+    .wae-team-info {
+      padding: 24px 20px;
+    }
+    .wae-team-info h5 {
+      font-family: var(--display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--t900);
+      margin-bottom: 4px;
+    }
+    .wae-team-info .role {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .wae-team-info p {
+      font-size: 0.88rem;
+      color: var(--t500);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .wae-team-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .wae-team-social a {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--subtle);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--t500);
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .wae-team-social a:hover {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+    }
+
+    /* ─── AWARDS ─── */
+    .wae-about-awards {
+      padding: 100px 0;
+      background: var(--t900);
+      position: relative;
+      overflow: hidden;
+    }
+    .wae-about-awards::before {
+      content: '';
+      position: absolute;
+      bottom: -100px; right: -100px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(229,57,53,0.08) 0%, transparent 70%);
+    }
+    .wae-award-card {
+      border-radius: 18px;
+      padding: 32px 28px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: all 0.35s ease;
+    }
+    .wae-award-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(229,57,53,0.3);
+      transform: translateY(-4px);
+    }
+    .wae-award-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(229,57,53,0.12);
+      border: 1px solid rgba(229,57,53,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      color: #FFD700;
+      flex-shrink: 0;
+    }
+    .wae-award-body h5 {
+      font-family: var(--display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .wae-award-body p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .wae-award-year {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: rgba(229,57,53,0.1);
+      border: 1px solid rgba(229,57,53,0.2);
+      border-radius: 100px;
+      padding: 2px 10px;
+      margin-top: 8px;
+      display: inline-block;
+    }
+
+    /* ─── CTA ─── */
+    .wae-about-cta {
+      padding: 100px 0;
+      background: var(--bg);
+      position: relative;
+    }
+    .wae-cta-box {
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--t900) 0%, #1E293B 50%, var(--t900) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 70px 60px;
+      text-align: center;
+    }
+    .wae-cta-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 20% 50%, rgba(229,57,53,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 70% at 80% 50%, rgba(229,57,53,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .wae-cta-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    .wae-cta-box > * { position: relative; z-index: 2; }
+    .wae-cta-box h2 {
+      font-family: var(--display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .wae-cta-box h2 span { color: var(--red); }
+    .wae-cta-box p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      max-width: 560px;
+      margin: 0 auto 36px;
+    }
+    .wae-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: none;
+      transition: all 0.28s ease;
+      box-shadow: 0 8px 24px rgba(229,57,53,0.35);
+    }
+    .wae-btn-primary:hover {
+      background: var(--red-dk);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(229,57,53,0.45);
+    }
+    .wae-btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.28s ease;
+    }
+    .wae-btn-outline-white:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.4);
+      color: #fff;
+    }
+
+    /* responsive helpers */
+    @media (max-width: 991.98px) {
+      .wae-hero-deco { margin-top: 50px; }
+      .wae-story-badge-float { bottom: -16px; right: 12px; }
+      .wae-story-badge-float2 { top: -14px; left: 12px; }
+      .wae-cta-box { padding: 50px 28px; }
+      .wae-stat-divider { display: none; }
+    }
+    @media (max-width: 575.98px) {
+      .wae-hero-deco-ring { width: 260px; height: 260px; }
+      .wae-hero-deco-center { width: 140px; height: 140px; }
+    }
+
+    /* counter animation */
+    .wae-counter { display: inline-block; }
+  </style>
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════════════
+     ABOUT HERO
+══════════════════════════════════════════════ -->
+<section class="wae-about-hero">
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7" data-aos="fade-right" data-aos-duration="800">
+        <div class="wae-hero-badge">
+          <span class="pulse"></span>
+          About Web EASY Experts
+        </div>
+        <h1 class="wae-hero-title">
+          We Build Websites<br>That <span>Work For Your Business</span>
+        </h1>
+        <p class="wae-hero-sub">
+          A passionate team of designers, developers, and strategists from India — helping businesses across Australia, USA, UK, UAE, Canada, and beyond establish a powerful digital presence.
+        </p>
+        <div class="wae-hero-scroll-hint">
+          <span class="line"></span>
+          Scroll to explore our story
+          <i class="bi bi-arrow-down"></i>
+        </div>
+      </div>
+      <div class="col-lg-5 d-flex justify-content-center" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+        <div class="wae-hero-deco">
+          <div class="wae-hero-deco-ring">
+            <span class="wae-deco-orbit"><i class="bi bi-globe2" style="color:var(--red);"></i></span>
+            <span class="wae-deco-orbit"><i class="bi bi-code-slash" style="color:var(--red);"></i></span>
+            <span class="wae-deco-orbit"><i class="bi bi-palette" style="color:var(--red);"></i></span>
+            <span class="wae-deco-orbit"><i class="bi bi-graph-up-arrow" style="color:var(--red);"></i></span>
+            <div class="wae-hero-deco-center">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     OUR STORY
+══════════════════════════════════════════════ -->
+<section class="wae-story-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- image side -->
+      <div class="col-lg-5" data-aos="fade-right" data-aos-duration="800">
+        <div class="wae-story-img-wrap" style="padding:24px 24px 24px 0;">
+          <div class="wae-story-img-main">
+            <div class="wae-story-img-content">
+              <div class="big-num">7+</div>
+              <div class="big-label">Years of Building<br>Digital Success</div>
+            </div>
+          </div>
+          <div class="wae-story-badge-float">
+            <div class="num">500+</div>
+            <div class="lbl">Projects Delivered</div>
+          </div>
+          <div class="wae-story-badge-float2">
+            <i class="bi bi-patch-check-fill"></i>
+            <div class="txt">
+              <strong>Trusted Globally</strong>
+              <span>9+ Countries Served</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- text side -->
+      <div class="col-lg-7" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+        <div class="wae-section-label"><span class="dot"></span> Our Story</div>
+        <div class="wae-divider"></div>
+        <h2 class="wae-display-title mb-4">From a Small Studio to a <span>Global Web Agency</span></h2>
+        <div class="wae-story-text">
+          <p>
+            Web EASY Experts was born out of a simple belief — <span class="wae-highlight-inline">every business deserves a powerful online presence</span>, regardless of its size or location. What started as a small web studio in India has grown into a full-service digital agency trusted by businesses across the globe.
+          </p>
+          <p>
+            Over the years, we've partnered with startups, SMEs, and established enterprises in <span class="wae-highlight-inline">Australia, USA, UK, UAE, Canada, Ireland, Singapore, Germany, Netherlands, and Sweden</span> — delivering custom-built, scalable websites that drive real business outcomes.
+          </p>
+          <p>
+            Our strength lies in our team — a group of dedicated designers, developers, and digital strategists who treat every project as if it were their own. We don't just build websites; we craft digital experiences that convert visitors into loyal customers.
+          </p>
+        </div>
+        <div class="mt-4 d-flex gap-3 flex-wrap">
+          <a href="tel:+919432120437" class="wae-btn-primary">
+            <i class="bi bi-telephone-fill"></i> Talk to Us
+          </a>
+          <a href="mailto:webeasyexperts@gmail.com" class="d-inline-flex align-items-center gap-2 text-decoration-none" style="color:var(--t700); font-weight:600; font-family:var(--display);">
+            <i class="bi bi-envelope" style="color:var(--red);"></i>
+            webeasyexperts@gmail.com
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     MISSION & VISION
+══════════════════════════════════════════════ -->
+<section class="wae-mv-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="wae-section-label mx-auto"><span class="dot"></span> Our Direction</div>
+      <div class="wae-divider wae-divider-center"></div>
+      <h2 class="wae-display-title">Mission & <span>Vision</span></h2>
+      <p class="wae-body-lead mx-auto mt-3">The purpose that drives us and the future we're building toward — together with our clients.</p>
+    </div>
+    <div class="row g-4">
+      <!-- Mission -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="wae-mv-card mission">
+          <div class="wae-mv-icon"><i class="bi bi-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>
+            To empower businesses worldwide with custom, high-performance websites that are not only visually stunning but strategically built to grow. We combine design excellence with technical precision to deliver digital solutions that create measurable impact — helping every client stand out, convert, and scale in their market.
+          </p>
+          <span class="wae-mv-tagline">Built with Purpose</span>
+        </div>
+      </div>
+      <!-- Vision -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="wae-mv-card vision">
+          <div class="wae-mv-icon"><i class="bi bi-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>
+            To become the most trusted web design and development partner for businesses across the globe — known for delivering world-class digital experiences that bridge the gap between great ideas and their online potential. We envision a world where every business, big or small, has access to professional, results-driven web solutions.
+          </p>
+          <span class="wae-mv-tagline">Driven by Impact</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     STATS
+══════════════════════════════════════════════ -->
+<section class="wae-about-stats">
+  <div class="container">
+    <div class="row align-items-center justify-content-center g-0 flex-wrap">
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="wae-stat-item">
+          <div class="num"><span class="wae-counter" data-target="500">0</span><span>+</span></div>
+          <div class="lbl">Projects Delivered</div>
+        </div>
+      </div>
+
+      <div class="d-none d-md-block col-md-auto"><div class="wae-stat-divider"></div></div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="wae-stat-item">
+          <div class="num"><span class="wae-counter" data-target="9">0</span><span>+</span></div>
+          <div class="lbl">Countries Served</div>
+        </div>
+      </div>
+
+      <div class="d-none d-md-block col-md-auto"><div class="wae-stat-divider"></div></div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="wae-stat-item">
+          <div class="num"><span class="wae-counter" data-target="7">0</span><span>+</span></div>
+          <div class="lbl">Years of Experience</div>
+        </div>
+      </div>
+
+      <div class="d-none d-md-block col-md-auto"><div class="wae-stat-divider"></div></div>
+
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="wae-stat-item">
+          <div class="num"><span class="wae-counter" data-target="98">0</span><span>%</span></div>
+          <div class="lbl">Client Satisfaction</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     VALUES
+══════════════════════════════════════════════ -->
+<section class="wae-values-section">
+  <div class="container position-relative" style="z-index:2;">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="wae-section-label mx-auto" style="background:rgba(229,57,53,0.12); border-color:rgba(229,57,53,0.3); color:#FF8A80;"><span class="dot"></span> What Guides Us</div>
+      <div class="wae-divider wae-divider-center"></div>
+      <h2 class="wae-display-title-white">Our Core <span>Values</span></h2>
+      <p class="wae-body-lead-white mx-auto mt-3">The principles we live by — in every project, every interaction, every line of code.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="wae-value-card">
+          <div class="wae-value-icon"><i class="bi bi-patch-check-fill"></i></div>
+          <h4>Quality Without Compromise</h4>
+          <p>We hold ourselves to the highest standards — from pixel-perfect design to clean, optimized code. Every project gets our full attention and craftsmanship.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="wae-value-card">
+          <div class="wae-value-icon"><i class="bi bi-people-fill"></i></div>
+          <h4>Client-First Mindset</h4>
+          <p>Your goals are our goals. We listen deeply, communicate clearly, and always keep your business objectives at the center of every decision we make.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="wae-value-card">
+          <div class="wae-value-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h4>Speed & Efficiency</h4>
+          <p>We respect your time and market opportunity. Our streamlined process ensures timely delivery without cutting corners on quality or functionality.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="wae-value-card">
+          <div class="wae-value-icon"><i class="bi bi-shield-lock-fill"></i></div>
+          <h4>Transparency & Trust</h4>
+          <p>No hidden costs, no surprises. We believe in open communication, honest timelines, and complete visibility at every stage of your project.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="wae-value-card">
+          <div class="wae-value-icon"><i class="bi bi-arrow-repeat"></i></div>
+          <h4>Continuous Improvement</h4>
+          <p>The digital world never stops evolving, and neither do we. We constantly upskill, adopt new technologies, and refine our processes to stay ahead.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="wae-value-card">
+          <div class="wae-value-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h4>Results-Driven Approach</h4>
+          <p>Beautiful design is nothing without performance. We build with conversions, SEO, and business growth in mind — because your success is our success.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     TEAM
+══════════════════════════════════════════════ -->
+<section class="wae-team-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="wae-section-label mx-auto"><span class="dot"></span> The People Behind the Work</div>
+      <div class="wae-divider wae-divider-center"></div>
+      <h2 class="wae-display-title">Meet Our <span>Team</span></h2>
+      <p class="wae-body-lead mx-auto mt-3">A talented, passionate, and globally experienced group of professionals committed to your digital success.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="wae-team-card">
+          <div class="wae-team-avatar">
+            <div class="initials">AK</div>
+          </div>
+          <div class="wae-team-info">
+            <h5>Ankit Kumar</h5>
+            <div class="role">Founder & Lead Developer</div>
+            <p>7+ years of full-stack web development. Expert in WordPress, PHP, and custom web applications for international clients.</p>
+            <div class="wae-team-social">
+              <a href="https://wa.me/919432120437" target="_blank"><i class="bi bi-whatsapp"></i></a>
+              <a href="mailto:webeasyexperts@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="wae-team-card">
+          <div class="wae-team-avatar">
+            <div class="initials">PM</div>
+          </div>
+          <div class="wae-team-info">
+            <h5>Priya Mehta</h5>
+            <div class="role">UI/UX Design Lead</div>
+            <p>Passionate about creating intuitive, beautiful interfaces. Specializes in SaaS dashboards, landing pages, and brand identity design.</p>
+            <div class="wae-team-social">
+              <a href="#"><i class="bi bi-dribbble"></i></a>
+              <a href="#"><i class="bi bi-behance"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="wae-team-card">
+          <div class="wae-team-avatar">
+            <div class="initials">RS</div>
+          </div>
+          <div class="wae-team-info">
+            <h5>Rahul Sharma</h5>
+            <div class="role">SEO & Digital Strategist</div>
+            <p>Helps clients rank higher and attract the right audience. Expert in technical SEO, content strategy, and international market targeting.</p>
+            <div class="wae-team-social">
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="mailto:webeasyexperts@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="wae-team-card">
+          <div class="wae-team-avatar">
+            <div class="initials">ND</div>
+          </div>
+          <div class="wae-team-info">
+            <h5>Neha Das</h5>
+            <div class="role">Project Manager & Client Success</div>
+            <p>The bridge between clients and our team. Ensures every project is delivered on time, within scope, and beyond expectations.</p>
+            <div class="wae-team-social">
+              <a href="https://wa.me/919432120437" target="_blank"><i class="bi bi-whatsapp"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:webeasyexperts@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     AWARDS & RECOGNITION
+══════════════════════════════════════════════ -->
+<section class="wae-about-awards">
+  <div class="container position-relative" style="z-index:2;">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="wae-section-label mx-auto" style="background:rgba(229,57,53,0.12); border-color:rgba(229,57,53,0.3); color:#FF8A80;"><span class="dot"></span> Recognition</div>
+      <div class="wae-divider wae-divider-center"></div>
+      <h2 class="wae-display-title-white">Awards & <span>Achievements</span></h2>
+      <p class="wae-body-lead-white mx-auto mt-3">Our work has been recognized by clients and industry bodies alike. We're proud of what we've built — together.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="wae-award-card">
+          <div class="wae-award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <div class="wae-award-body">
+            <h5>Top Web Design Agency — India</h5>
+            <p>Recognized as one of the top web design agencies in India by global B2B listing platforms for consistent quality and client satisfaction.</p>
+            <span class="wae-award-year">2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="80">
+        <div class="wae-award-card">
+          <div class="wae-award-icon"><i class="bi bi-star-fill"></i></div>
+          <div class="wae-award-body">
+            <h5>5-Star Rated on Google & Clutch</h5>
+            <p>Consistently maintained 5-star client reviews across major platforms with 100+ verified reviews from satisfied clients worldwide.</p>
+            <span class="wae-award-year">2023–2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="160">
+        <div class="wae-award-card">
+          <div class="wae-award-icon"><i class="bi bi-globe2"></i></div>
+          <div class="wae-award-body">
+            <h5>Global Reach Excellence Award</h5>
+            <p>Honored for successfully serving clients across 9+ countries and bridging the gap between Indian digital talent and global business needs.</p>
+            <span class="wae-award-year">2023</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="240">
+        <div class="wae-award-card">
+          <div class="wae-award-icon"><i class="bi bi-shield-check"></i></div>
+          <div class="wae-award-body">
+            <h5>Verified Business — 500+ Projects</h5>
+            <p>Achieved the milestone of 500+ completed projects, earning a verified expert badge with a 98% client satisfaction and on-time delivery rate.</p>
+            <span class="wae-award-year">2022–2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     CTA
+══════════════════════════════════════════════ -->
+<section class="wae-about-cta">
+  <div class="container">
+    <div class="wae-cta-box" data-aos="fade-up" data-aos-duration="900">
+      <div class="wae-section-label mx-auto mb-4" style="background:rgba(229,57,53,0.15); border-color:rgba(229,57,53,0.3); color:#FF8A80;">
+        <span class="dot"></span> Let's Work Together
+      </div>
+      <h2>Ready to Build Something <span>Extraordinary?</span></h2>
+      <p>Whether you're starting from scratch or upgrading an existing site, we're here to help. Let's talk about your project — no obligation, just a free consultation.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="https://wa.me/919432120437" target="_blank" class="wae-btn-primary">
+          <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <a href="tel:+919432120437" class="wae-btn-outline-white">
+          <i class="bi bi-telephone-fill"></i> +91 94321 20437
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // AOS Init
+  AOS.init({ once: true, duration: 750, easing: 'ease-out-cubic' });
+
+  // Counter animation
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const duration = 1800;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target);
+      if (progress < 1) requestAnimationFrame(update);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(update);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.wae-counter').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
