@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Web EASY Experts</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --red:    #E53935;
+      --red-lt: #FFEBEE;
+      --red-dk: #B71C1C;
+      --bg:     #F8FAFC;
+      --white:  #FFFFFF;
+      --subtle: #F1F5F9;
+      --t900:   #0F172A;
+      --t700:   #334155;
+      --t500:   #64748B;
+      --t300:   #CBD5E1;
+      --border: #E2E8F0;
+      --display:'Plus Jakarta Sans', sans-serif;
+      --body:   'Inter', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--body); background: var(--white); color: var(--t700); -webkit-font-smoothing: antialiased; }
+
+    /* ── SHARED ── */
+    .wct-chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      padding: 5px 16px; border-radius: 100px; margin-bottom: 16px;
+    }
+    .wct-chip-red { color: var(--red); background: var(--red-lt); border: 1px solid rgba(229,57,53,.18); }
+    .wct-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    .wct-h2 { font-family: var(--display); font-weight: 800; line-height: 1.12; font-size: clamp(1.8rem, 3.8vw, 2.8rem); color: var(--t900); }
+    .wct-h2 em { color: var(--red); font-style: normal; }
+
+    /* ══════════════════════════════════════════
+       § 1  HERO — light bg, image right
+    ══════════════════════════════════════════ */
+    .wct-hero {
+      background: var(--bg);
+      padding: 90px 0 80px;
+      position: relative; overflow: hidden;
+    }
+    /* very subtle red tint top-left only */
+    .wct-hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(229,57,53,.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .wct-hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--red-lt); border: 1px solid rgba(229,57,53,.2);
+      color: var(--red); font-size: .72rem; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      border-radius: 100px; padding: 6px 16px; margin-bottom: 22px;
+    }
+    .wct-hero-badge .dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--red);
+      animation: wct-pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes wct-pulse {
+      0%,100%{ box-shadow: 0 0 0 0 rgba(229,57,53,.4); }
+      50%    { box-shadow: 0 0 0 6px rgba(229,57,53,0); }
+    }
+
+    .wct-hero-title {
+      font-family: var(--display); font-weight: 800;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: var(--t900); line-height: 1.1; margin-bottom: 18px;
+    }
+    .wct-hero-title em { color: var(--red); font-style: normal; }
+    .wct-hero-desc { font-size: 1.05rem; color: var(--t500); line-height: 1.82; max-width: 480px; margin-bottom: 32px; }
+
+    /* CTA buttons */
+    .wct-btn-red {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: var(--red); color: #fff; font-family: var(--display);
+      font-size: .92rem; font-weight: 700; padding: 13px 26px;
+      border-radius: 12px; text-decoration: none;
+      box-shadow: 0 8px 24px rgba(229,57,53,.3);
+      transition: background .25s, transform .25s;
+    }
+    .wct-btn-red:hover { background: var(--red-dk); color: #fff; transform: translateY(-2px); }
+
+    .wct-btn-wa {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: #fff; color: var(--t700); font-family: var(--display);
+      font-size: .92rem; font-weight: 700; padding: 13px 26px;
+      border-radius: 12px; text-decoration: none;
+      border: 1.5px solid var(--border);
+      transition: border-color .25s, color .25s;
+    }
+    .wct-btn-wa:hover { border-color: #25D366; color: #25D366; }
+    .wct-btn-wa i { color: #25D366; }
+
+    /* hero image side */
+    .wct-hero-img {
+      border-radius: 22px; overflow: hidden;
+      position: relative; height: 440px;
+      box-shadow: 0 24px 64px rgba(0,0,0,.1);
+    }
+    .wct-hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    /* floating card on image */
+    .wct-img-float {
+      position: absolute; bottom: 20px; left: 20px;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(12px);
+      border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .wct-img-float .ico {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--red-lt); display: flex; align-items: center; justify-content: center;
+      color: var(--red); font-size: 1.1rem; flex-shrink: 0;
+    }
+    .wct-img-float strong { display: block; font-family: var(--display); font-size: .88rem; font-weight: 700; color: var(--t900); }
+    .wct-img-float span   { font-size: .76rem; color: var(--t500); }
+
+    .wct-response {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: .8rem; font-weight: 600; color: #16a34a;
+      background: #f0fdf4; border: 1px solid #bbf7d0;
+      border-radius: 100px; padding: 5px 14px; margin-top: 18px;
+    }
+    .wct-response .rdot {
+      width: 7px; height: 7px; border-radius: 50%; background: #22c55e;
+      animation: wct-pulse 2s ease-in-out infinite;
+    }
+
+    /* ══════════════════════════════════════════
+       § 2  FORM + INFO — white bg
+    ══════════════════════════════════════════ */
+    .wct-main { padding: 80px 0; background: var(--white); }
+
+    /* FORM */
+    .wct-form-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 22px; padding: 44px 40px;
+    }
+    @media(max-width:575.98px){ .wct-form-card { padding: 28px 20px; } }
+
+    .wct-form-card h3 {
+      font-family: var(--display); font-size: 1.35rem; font-weight: 800;
+      color: var(--t900); margin-bottom: 4px;
+    }
+    .wct-form-card > p { font-size: .85rem; color: var(--t500); margin-bottom: 28px; }
+
+    .wct-field { margin-bottom: 18px; }
+    .wct-field label {
+      display: block; font-size: .78rem; font-weight: 700;
+      color: var(--t700); margin-bottom: 6px; letter-spacing: .04em;
+    }
+    .wct-field label .req { color: var(--red); }
+    .wct-field label .opt { font-size: .7rem; font-weight: 400; color: var(--t300); margin-left: 4px; }
+
+    .wct-input, .wct-select, .wct-textarea {
+      width: 100%; font-family: var(--body); font-size: .9rem; color: var(--t900);
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 11px; padding: 11px 15px; outline: none;
+      transition: border-color .22s, box-shadow .22s;
+      appearance: none;
+    }
+    .wct-input::placeholder, .wct-textarea::placeholder { color: var(--t300); }
+    .wct-input:focus, .wct-select:focus, .wct-textarea:focus {
+      border-color: var(--red); box-shadow: 0 0 0 3px rgba(229,57,53,.08);
+    }
+    .wct-textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+    .wct-sel-wrap { position: relative; }
+    .wct-sel-wrap::after {
+      content: '\F282'; font-family: 'bootstrap-icons';
+      position: absolute; right: 13px; top: 50%; transform: translateY(-50%);
+      color: var(--t500); pointer-events: none; font-size: .85rem;
+    }
+    .wct-sel-wrap .wct-select { padding-right: 38px; cursor: pointer; }
+
+    .wct-phone-wrap { position: relative; }
+    .wct-phone-pre {
+      position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+      font-size: .85rem; color: var(--t500); font-weight: 600; pointer-events: none;
+    }
+    .wct-phone-wrap .wct-input { padding-left: 66px; }
+
+    .wct-submit {
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 9px;
+      background: var(--red); color: #fff; font-family: var(--display);
+      font-size: .96rem; font-weight: 700; padding: 14px 24px;
+      border-radius: 12px; border: none; cursor: pointer;
+      box-shadow: 0 6px 20px rgba(229,57,53,.28);
+      transition: background .22s, transform .22s;
+    }
+    .wct-submit:hover { background: var(--red-dk); transform: translateY(-2px); }
+
+    .wct-privacy {
+      display: flex; align-items: center; gap: 7px;
+      font-size: .74rem; color: var(--t500); margin-top: 12px;
+    }
+    .wct-privacy i { color: var(--red); }
+
+    /* success */
+    .wct-success { display: none; text-align: center; padding: 36px 16px; }
+    .wct-sico {
+      width: 68px; height: 68px; border-radius: 50%;
+      background: #f0fdf4; border: 2px solid #bbf7d0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; color: #22c55e; margin: 0 auto 18px;
+      animation: wct-pop .4s cubic-bezier(.34,1.56,.64,1);
+    }
+    @keyframes wct-pop { from { transform: scale(0); } to { transform: scale(1); } }
+    .wct-success h4 { font-family: var(--display); font-size: 1.3rem; font-weight: 800; color: var(--t900); margin-bottom: 8px; }
+    .wct-success p  { color: var(--t500); font-size: .9rem; margin-bottom: 20px; }
+
+    /* RIGHT INFO */
+    .wct-info-stack { display: flex; flex-direction: column; gap: 16px; }
+
+    .wct-icard {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 22px 20px;
+      display: flex; align-items: flex-start; gap: 14px;
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .wct-icard:hover { border-color: rgba(229,57,53,.25); box-shadow: 0 4px 20px rgba(229,57,53,.06); }
+    .wct-icard-ico {
+      width: 44px; height: 44px; flex-shrink: 0; border-radius: 12px;
+      background: var(--red-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; color: var(--red);
+    }
+    .wct-icard strong { display: block; font-family: var(--display); font-size: .9rem; font-weight: 700; color: var(--t900); margin-bottom: 3px; }
+    .wct-icard a { font-size: .84rem; color: var(--red); text-decoration: none; font-weight: 600; display: block; }
+    .wct-icard a:hover { color: var(--red-dk); }
+    .wct-icard span { font-size: .84rem; color: var(--t500); }
+
+    /* hours block */
+    .wct-hours {
+      background: var(--bg); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 22px 20px;
+    }
+    .wct-hours h6 {
+      font-family: var(--display); font-size: .88rem; font-weight: 700;
+      color: var(--t900); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 7px;
+    }
+    .wct-hours h6 i { color: var(--red); }
+    .wct-hrow {
+      display: flex; justify-content: space-between;
+      font-size: .82rem; padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .wct-hrow:last-child { border-bottom: none; padding-bottom: 0; }
+    .wct-hrow .day  { color: var(--t500); }
+    .wct-hrow .time { font-weight: 600; color: var(--t900); }
+    .wct-hrow .time.off { color: var(--red); }
+
+    /* socials */
+    .wct-soc-row { display: flex; gap: 9px; margin-top: 4px; }
+    .wct-soc-row a {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--subtle); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--t500); font-size: .95rem; text-decoration: none;
+      transition: background .2s, color .2s, border-color .2s, transform .2s;
+    }
+    .wct-soc-row a:hover { transform: translateY(-3px); }
+    .wct-soc-row a.wa:hover { background:#25D366; border-color:#25D366; color:#fff; }
+    .wct-soc-row a.li:hover { background:#0077B5; border-color:#0077B5; color:#fff; }
+    .wct-soc-row a.ig:hover { background:#E1306C; border-color:#E1306C; color:#fff; }
+    .wct-soc-row a.fb:hover { background:#1877F2; border-color:#1877F2; color:#fff; }
+
+    /* ══════════════════════════════════════════
+       § 3  FAQ — light bg
+    ══════════════════════════════════════════ */
+    .wct-faq { padding: 80px 0; background: var(--bg); }
+
+    .wct-acc {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 14px; margin-bottom: 10px;
+    }
+    .wct-acc-btn {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      font-family: var(--display); font-size: .95rem; font-weight: 700; color: var(--t900);
+    }
+    .wct-acc-ico {
+      width: 30px; height: 30px; flex-shrink: 0; border-radius: 8px;
+      background: var(--subtle); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .78rem; color: var(--t500);
+      transition: background .22s, color .22s, transform .3s;
+    }
+    .wct-acc-btn.open .wct-acc-ico { background: var(--red-lt); border-color: rgba(229,57,53,.2); color: var(--red); transform: rotate(45deg); }
+    .wct-acc-body { max-height: 0; overflow: hidden; transition: max-height .32s ease, padding .32s; padding: 0 22px; }
+    .wct-acc-body.open { max-height: 240px; padding: 0 22px 18px; }
+    .wct-acc-body p { font-size: .88rem; color: var(--t500); line-height: 1.78; margin: 0; }
+
+    /* ══════════════════════════════════════════
+       § 4  CTA — only ONE dark section (bottom)
+    ══════════════════════════════════════════ */
+    .wct-cta {
+      padding: 80px 0;
+      background: var(--t900);
+      position: relative; overflow: hidden;
+    }
+    .wct-cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+    .wct-cta::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 400px; border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(229,57,53,.15) 0%, transparent 70%);
+    }
+    .wct-cta > .container { position: relative; z-index: 2; }
+
+    .wct-cta-wrap { display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: center; }
+    @media(max-width:991.98px){ .wct-cta-wrap { grid-template-columns: 1fr; gap: 36px; } }
+
+    .wct-cta-wrap h2 { font-family: var(--display); font-size: clamp(1.7rem,3.5vw,2.6rem); font-weight: 800; color: #fff; margin-bottom: 12px; line-height: 1.15; }
+    .wct-cta-wrap h2 em { color: var(--red); font-style: normal; }
+    .wct-cta-wrap p { color: rgba(255,255,255,.6); font-size: .98rem; line-height: 1.78; }
+
+    .wct-cta-btns { display: flex; flex-direction: column; gap: 12px; }
+    .wct-cta-btn {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px; padding: 16px 20px; text-decoration: none;
+      transition: background .22s, border-color .22s;
+    }
+    .wct-cta-btn:hover { background: rgba(255,255,255,.1); border-color: rgba(229,57,53,.35); }
+    .wct-cta-btn-ico {
+      width: 42px; height: 42px; border-radius: 11px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    }
+    .wct-cta-btn-ico.r { background: rgba(229,57,53,.15); color: var(--red); }
+    .wct-cta-btn-ico.g { background: rgba(37,211,102,.15); color: #25D366; }
+    .wct-cta-btn-ico.b { background: rgba(59,130,246,.15); color: #60a5fa; }
+    .wct-cta-btn strong { display: block; font-family: var(--display); font-size: .88rem; font-weight: 700; color: #fff; }
+    .wct-cta-btn span   { font-size: .78rem; color: rgba(255,255,255,.45); }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     § 1  HERO — Light
+══════════════════════════════ -->
+<section class="wct-hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+        <div class="wct-hero-badge"><span class="dot"></span> Contact Us</div>
+        <h1 class="wct-hero-title">Let's Build Something <em>Great Together</em></h1>
+        <p class="wct-hero-desc">Have a project in mind? We'd love to hear about it. Fill the form below or reach out directly — we respond fast.</p>
+
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="mailto:webeasyexperts@gmail.com" class="wct-btn-red">
+            <i class="bi bi-envelope-fill"></i> Send Email
+          </a>
+          <a href="https://wa.me/919432120437" target="_blank" class="wct-btn-wa">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+        <div class="wct-response">
+          <span class="rdot"></span> Typically respond within 2–4 hours
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+        <div class="wct-hero-img">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80&auto=format&fit=crop" alt="Team ready to help"/>
+          <div class="wct-img-float">
+            <div class="ico"><i class="bi bi-patch-check-fill"></i></div>
+            <div>
+              <strong>500+ Projects Delivered</strong>
+              <span>Across 9+ Countries Worldwide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     § 2  FORM + INFO — White
+══════════════════════════════ -->
+<section class="wct-main">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+
+      <!-- FORM -->
+      <div class="col-lg-7" data-aos="fade-right" data-aos-duration="800">
+        <div class="wct-form-card">
+          <h3>Send Us a Message</h3>
+          <p>Fields marked <span style="color:var(--red)">*</span> are required.</p>
+
+          <form id="wct-form" novalidate>
+            <div class="row g-0">
+              <div class="col-sm-6 pe-sm-2">
+                <div class="wct-field">
+                  <label>Full Name <span class="req">*</span></label>
+                  <input type="text" class="wct-input" id="f-name" placeholder="John Smith" required/>
+                </div>
+              </div>
+              <div class="col-sm-6 ps-sm-2">
+                <div class="wct-field">
+                  <label>Company <span class="opt">(optional)</span></label>
+                  <input type="text" class="wct-input" id="f-company" placeholder="Acme Corp"/>
+                </div>
+              </div>
+              <div class="col-sm-6 pe-sm-2">
+                <div class="wct-field">
+                  <label>Email <span class="req">*</span></label>
+                  <input type="email" class="wct-input" id="f-email" placeholder="john@example.com" required/>
+                </div>
+              </div>
+              <div class="col-sm-6 ps-sm-2">
+                <div class="wct-field">
+                  <label>Phone <span class="req">*</span></label>
+                  <div class="wct-phone-wrap">
+                    <span class="wct-phone-pre">🌍 +</span>
+                    <input type="tel" class="wct-input" id="f-phone" placeholder="91 94321 20437" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 pe-sm-2">
+                <div class="wct-field">
+                  <label>Service Needed <span class="opt">(optional)</span></label>
+                  <div class="wct-sel-wrap">
+                    <select class="wct-select wct-input" id="f-service">
+                      <option value="" disabled selected>Select a service</option>
+                      <option>Website Design & Development</option>
+                      <option>E-commerce Store</option>
+                      <option>WordPress Development</option>
+                      <option>Landing Page</option>
+                      <option>Website Redesign</option>
+                      <option>SEO Optimization</option>
+                      <option>Website Maintenance</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 ps-sm-2">
+                <div class="wct-field">
+                  <label>Budget Range <span class="opt">(optional)</span></label>
+                  <div class="wct-sel-wrap">
+                    <select class="wct-select wct-input" id="f-budget">
+                      <option value="" disabled selected>Select range</option>
+                      <option>Under $500</option>
+                      <option>$500 – $1,000</option>
+                      <option>$1,000 – $2,500</option>
+                      <option>$2,500 – $5,000</option>
+                      <option>$5,000+</option>
+                      <option>Not Sure Yet</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="wct-field mb-0">
+                  <label>Message <span class="req">*</span></label>
+                  <textarea class="wct-textarea" id="f-msg" placeholder="Tell us about your project, goals, or any specific requirements..." required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="wct-submit mt-4">
+              <i class="bi bi-send-fill"></i> Send Message
+            </button>
+            <div class="wct-privacy">
+              <i class="bi bi-shield-lock-fill"></i>
+              Your information is secure and never shared with third parties.
+            </div>
+          </form>
+
+          <div class="wct-success" id="wct-success">
+            <div class="wct-sico"><i class="bi bi-check-lg"></i></div>
+            <h4>Message Sent!</h4>
+            <p>We'll get back to you within 2–4 hours. For faster response, WhatsApp us directly.</p>
+            <a href="https://wa.me/919432120437" target="_blank" class="wct-btn-red d-inline-flex">
+              <i class="bi bi-whatsapp"></i> Continue on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="col-lg-5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+        <div class="wct-info-stack">
+
+          <div class="wct-icard">
+            <div class="wct-icard-ico"><i class="bi bi-telephone-fill"></i></div>
+            <div>
+              <strong>Phone & WhatsApp</strong>
+              <a href="tel:+919432120437">+91 94321 20437</a>
+              <a href="https://wa.me/919432120437" target="_blank" style="color:#25D366;"><i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="wct-icard">
+            <div class="wct-icard-ico"><i class="bi bi-envelope-fill"></i></div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:webeasyexperts@gmail.com">webeasyexperts@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="wct-hours">
+            <h6><i class="bi bi-clock-fill"></i> Working Hours</h6>
+            <div class="wct-hrow"><span class="day">Monday – Friday</span><span class="time">9 AM – 7 PM IST</span></div>
+            <div class="wct-hrow"><span class="day">Saturday</span><span class="time">10 AM – 4 PM IST</span></div>
+            <div class="wct-hrow"><span class="day">Sunday</span><span class="time off">Closed</span></div>
+          </div>
+
+          <div class="wct-icard" style="flex-direction:column; gap:12px;">
+            <strong style="font-family:var(--display); font-size:.82rem; font-weight:700; color:var(--t500); text-transform:uppercase; letter-spacing:.08em;">Follow Us</strong>
+            <div class="wct-soc-row">
+              <a href="https://wa.me/919432120437" target="_blank" class="wa" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+              <a href="#" class="li" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="ig" title="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="fb" title="Facebook"><i class="bi bi-facebook"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     § 3  FAQ — Light bg
+══════════════════════════════ -->
+<section class="wct-faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center mb-5" data-aos="fade-up">
+        <div class="wct-chip wct-chip-red mx-auto"><span class="dot"></span> Quick Answers</div>
+        <h2 class="wct-h2">Common <em>Questions</em></h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="wct-acc">
+          <button class="wct-acc-btn" onclick="wctToggle(this)">How long does a website take? <span class="wct-acc-ico"><i class="bi bi-plus-lg"></i></span></button>
+          <div class="wct-acc-body"><p>Simple sites: 3–7 days. Full business/e-commerce websites: 2–4 weeks. We share a clear timeline after understanding your needs.</p></div>
+        </div>
+
+        <div class="wct-acc">
+          <button class="wct-acc-btn" onclick="wctToggle(this)">Do you work with international clients? <span class="wct-acc-ico"><i class="bi bi-plus-lg"></i></span></button>
+          <div class="wct-acc-body"><p>Yes! We regularly work with clients across Australia, USA, UK, UAE, Canada, Ireland, Singapore, Germany, Netherlands & Sweden — fully remote via WhatsApp, Zoom, or email.</p></div>
+        </div>
+
+        <div class="wct-acc">
+          <button class="wct-acc-btn" onclick="wctToggle(this)">What is your pricing? <span class="wct-acc-ico"><i class="bi bi-plus-lg"></i></span></button>
+          <div class="wct-acc-body"><p>Pricing depends on scope and features. Share your requirements and we'll send a detailed, transparent quote within 24 hours — no hidden charges.</p></div>
+        </div>
+
+        <div class="wct-acc">
+          <button class="wct-acc-btn" onclick="wctToggle(this)">Do you provide post-launch support? <span class="wct-acc-ico"><i class="bi bi-plus-lg"></i></span></button>
+          <div class="wct-acc-body"><p>Yes — 30 days free support after launch, plus optional monthly maintenance plans for ongoing updates and performance monitoring.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════
+     § 4  CTA — Single dark section
+══════════════════════════════ -->
+<section class="wct-cta">
+  <div class="container">
+    <div class="wct-cta-wrap" data-aos="fade-up" data-aos-duration="800">
+
+      <div>
+        <div class="wct-chip" style="color:#FF8A80;background:rgba(229,57,53,.1);border:1px solid rgba(229,57,53,.28);">
+          <span class="dot" style="background:var(--red);"></span> Free Consultation
+        </div>
+        <h2>Not Sure Where to <em>Start?</em></h2>
+        <p class="mt-2">Book a free 30-minute call. No pressure, no commitment — just a friendly conversation about your business goals.</p>
+      </div>
+
+      <div class="wct-cta-btns">
+        <a href="https://wa.me/919432120437" target="_blank" class="wct-cta-btn">
+          <div class="wct-cta-btn-ico g"><i class="bi bi-whatsapp"></i></div>
+          <div><strong>Chat on WhatsApp</strong><span>Fastest response</span></div>
+        </a>
+        <a href="tel:+919432120437" class="wct-cta-btn">
+          <div class="wct-cta-btn-ico r"><i class="bi bi-telephone-fill"></i></div>
+          <div><strong>+91 94321 20437</strong><span>Call us directly</span></div>
+        </a>
+        <a href="mailto:webeasyexperts@gmail.com" class="wct-cta-btn">
+          <div class="wct-cta-btn-ico b"><i class="bi bi-envelope-fill"></i></div>
+          <div><strong>webeasyexperts@gmail.com</strong><span>For detailed inquiries</span></div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 780, easing: 'ease-out-cubic' });
+
+  function wctToggle(btn) {
+    const body = btn.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+    document.querySelectorAll('.wct-acc-body.open').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.wct-acc-btn.open').forEach(b => b.classList.remove('open'));
+    if (!isOpen) { body.classList.add('open'); btn.classList.add('open'); }
+  }
+
+  document.getElementById('wct-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fields = [
+      document.getElementById('f-name'),
+      document.getElementById('f-email'),
+      document.getElementById('f-phone'),
+      document.getElementById('f-msg'),
+    ];
+    let valid = true;
+    fields.forEach(el => {
+      if (!el.value.trim()) {
+        el.style.borderColor = 'var(--red)';
+        el.style.boxShadow = '0 0 0 3px rgba(229,57,53,.1)';
+        valid = false;
+        el.addEventListener('input', () => { el.style.borderColor = ''; el.style.boxShadow = ''; }, { once: true });
+      }
+    });
+    if (!valid) return;
+    this.style.display = 'none';
+    document.getElementById('wct-success').style.display = 'block';
+  });
+</script>
+</body>
+</html>
