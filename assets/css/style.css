@@ -4612,8 +4612,47 @@ textarea.wexpert-contact-input {
 
 /* ══════ END wexpert-whychoose CSS ══════ */
 /* utility css start */
-.section-title span.accent {
+.accent-red, .section-title span.accent {
   color: #f72539;
 }
+/* animated logo addon by aman  */
+.logo-shine {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
 
+.logo-shine img {
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+/* shine layer */
+.logo-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shineMove 3s infinite;
+}
+
+/* animation */
+@keyframes shineMove {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
 /* utility css end */
