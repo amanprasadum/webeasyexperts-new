@@ -1169,76 +1169,73 @@ a {
 }
 
 /* ── Logos marquee ── */
+/* ══════ LOGOS MARQUEE ══════ */
 .logos-section {
-  padding: 3rem 0;
-  background: var(--subtle);
+  padding: 28px 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   overflow: hidden;
+  position: relative;
 }
 
 .logos-label {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--t500);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   text-align: center;
-  margin-bottom: 1.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--t500);
+  margin-bottom: 18px;
 }
 
 .marquee-track {
+  display: flex;
   overflow: hidden;
-  position: relative;
   width: 100%;
-}
-
-.marquee-track::before,
-.marquee-track::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 80px;
-  z-index: 2;
-}
-
-.marquee-track::before {
-  left: 0;
-  background: linear-gradient(to right, var(--subtle), transparent);
-}
-
-.marquee-track::after {
-  right: 0;
-  background: linear-gradient(to left, var(--subtle), transparent);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .marquee-inner {
   display: flex;
-  gap: 3rem;
-  animation: marq 24s linear infinite;
-  width: max-content;
+  gap: 0;
+  flex-shrink: 0;
+  animation: marquee-scroll 28s linear infinite;
 }
 
-@keyframes marq {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+.marquee-inner:hover {
+  animation-play-state: paused;
 }
 
 .logo-pill {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--t300);
+  gap: 8px;
+  padding: 10px 22px;
+  margin: 0 6px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--white);
   white-space: nowrap;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--t700);
+  font-family: var(--display);
+  transition: border-color 0.2s;
+}
+
+.logo-pill:hover {
+  border-color: var(--t300);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ── Service cards ── */
@@ -4612,9 +4609,11 @@ textarea.wexpert-contact-input {
 
 /* ══════ END wexpert-whychoose CSS ══════ */
 /* utility css start */
-.accent-red, .section-title span.accent {
+.accent-red,
+.section-title span.accent {
   color: #f72539;
 }
+
 /* animated logo addon by aman  */
 .logo-shine {
   position: relative;
@@ -4636,12 +4635,10 @@ textarea.wexpert-contact-input {
   left: -75%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.6),
-    transparent
-  );
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent);
   transform: skewX(-25deg);
   animation: shineMove 3s infinite;
 }
@@ -4651,8 +4648,10 @@ textarea.wexpert-contact-input {
   0% {
     left: -75%;
   }
+
   100% {
     left: 125%;
   }
 }
+
 /* utility css end */
