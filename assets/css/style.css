@@ -2072,7 +2072,8 @@ a {
 
 .ct-text {
   display: inline-block;
-  font-size: 0.82rem;
+  /* font-size: 0.82rem; */
+  font-size: 12px;
   font-weight: 600;
   color: var(--t700);
   background: var(--subtle);
