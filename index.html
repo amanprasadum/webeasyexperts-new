@@ -37,6 +37,80 @@
     rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+ 
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gear-big  { animation: rotateCW  9s linear infinite; transform-box:fill-box; transform-origin:50% 50%; }
+  .gear-med  { animation: rotateCCW 5s linear infinite; transform-box:fill-box; transform-origin:50% 50%; }
+  .gear-sm   { animation: rotateCW  3.5s linear infinite; transform-box:fill-box; transform-origin:50% 50%; }
+  .gear-red  { animation: rotateCCW 6s linear infinite; transform-box:fill-box; transform-origin:50% 50%; }
+  @keyframes rotateCW  { to { transform:rotate(360deg);  } }
+  @keyframes rotateCCW { to { transform:rotate(-360deg); } }
+
+  .float1 { animation: f1 4s ease-in-out infinite; }
+  .float2 { animation: f2 5.2s ease-in-out infinite; }
+  .float3 { animation: f3 3.6s ease-in-out infinite; }
+  .float4 { animation: f4 4.8s ease-in-out infinite; }
+  @keyframes f1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+  @keyframes f2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+  @keyframes f3 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-11px)} }
+  @keyframes f4 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+  .bar1 { animation: growB 1.8s ease-out forwards, pb1 3s 1.8s ease-in-out infinite; transform-origin:bottom; }
+  .bar2 { animation: growB 1.8s .25s ease-out forwards, pb2 3s 2.05s ease-in-out infinite; transform-origin:bottom; }
+  .bar3 { animation: growB 1.8s .5s ease-out forwards, pb3 3s 2.3s ease-in-out infinite; transform-origin:bottom; }
+  .bar4 { animation: growB 1.8s .75s ease-out forwards, pb4 3s 2.55s ease-in-out infinite; transform-origin:bottom; }
+  .barR { animation: growB 1.8s .4s ease-out forwards, pbR 2.5s 2.2s ease-in-out infinite; transform-origin:bottom; }
+  @keyframes growB { from{transform:scaleY(0)} to{transform:scaleY(1)} }
+  @keyframes pb1 { 0%,100%{opacity:1} 50%{opacity:.55} }
+  @keyframes pb2 { 0%,100%{opacity:1} 50%{opacity:.65} }
+  @keyframes pb3 { 0%,100%{opacity:1} 50%{opacity:.5} }
+  @keyframes pb4 { 0%,100%{opacity:1} 50%{opacity:.7} }
+  @keyframes pbR { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+  .line-main { stroke-dasharray:140; stroke-dashoffset:140; animation:drawL 2s 1s ease-out forwards; }
+  .line-red  { stroke-dasharray:100; stroke-dashoffset:100; animation:drawL 2s 1.4s ease-out forwards; }
+  @keyframes drawL { to{stroke-dashoffset:0} }
+
+  .dot-live { animation: dotPulse 1.4s ease-in-out infinite; }
+  @keyframes dotPulse { 0%,100%{r:4;opacity:1} 50%{r:2;opacity:.35} }
+
+  .ring-pulse { animation: ringP 2s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+  @keyframes ringP { 0%,100%{transform:scale(1);opacity:.5} 50%{transform:scale(1.18);opacity:.15} }
+
+  .cl1 { opacity:0; animation:fadeC .4s .5s ease-out forwards; }
+  .cl2 { opacity:0; animation:fadeC .4s .9s ease-out forwards; }
+  .cl3 { opacity:0; animation:fadeC .4s 1.3s ease-out forwards; }
+  .cl4 { opacity:0; animation:fadeC .4s 1.7s ease-out forwards; }
+  .cl5 { opacity:0; animation:fadeC .4s 2.1s ease-out forwards; }
+  @keyframes fadeC { to{opacity:1} }
+
+  .badge-pop { animation: popIn .5s 2.4s cubic-bezier(.36,1.8,.5,1) both; transform-box:fill-box; transform-origin:50% 50%; }
+  @keyframes popIn { from{transform:scale(0)} to{transform:scale(1)} }
+
+  .alert-badge { animation: popIn .5s 2.8s cubic-bezier(.36,1.8,.5,1) both, alertBlink 1.8s 3.3s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+  @keyframes alertBlink { 0%,100%{opacity:1} 50%{opacity:.45} }
+
+  .sk1 { animation: sparkle 2s infinite; }
+  .sk2 { animation: sparkle 2s .6s infinite; }
+  .sk3 { animation: sparkle 2s 1.2s infinite; }
+  .sk4 { animation: sparkle 2s 1.8s infinite; }
+  @keyframes sparkle { 0%,100%{opacity:0;transform:scale(.4)} 50%{opacity:1;transform:scale(1)} }
+
+  .scan-line { animation: scan 4s linear infinite; }
+  @keyframes scan { from{transform:translateY(0)} to{transform:translateY(228px)} }
+
+  .circuit-dash { stroke-dasharray:6 4; animation: circuitFlow 3s linear infinite; }
+  @keyframes circuitFlow { from{stroke-dashoffset:0} to{stroke-dashoffset:-40} }
+
+  .red-pulse-ring { animation: redRingP 1.6s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+  @keyframes redRingP { 0%,100%{transform:scale(1);opacity:.6} 50%{transform:scale(1.3);opacity:.1} }
+</style>
 </head>
 
 <body>
