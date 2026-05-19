@@ -796,6 +796,7 @@ a {
 .mega-promo {
   /* background: linear-gradient(135deg, var(--red) 0%, #FF5252 100%); */
   background-image: url(../images/nav-promo.png);
+  background-size: cover;
   border-radius: var(--r-lg);
   padding: 1.25rem;
   color: #fff;
