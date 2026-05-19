@@ -1,7 +1,6 @@
 /* ── Design tokens ── */
 :root {
-  /* --red: #E53935; */
-  --red: linear-gradient(135deg, #0f0f0f 0%, #b31217 45%, #ff4d4d 100%);
+  --red: #E53935;
   --red-lt: #FFEBEE;
   --red-dk: #B71C1C;
   --bg: #F8FAFC;
