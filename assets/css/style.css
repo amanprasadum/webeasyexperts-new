@@ -831,7 +831,8 @@ a {
 
 /* ── Buttons ── */
 .btn-brand {
-  background: var(--red);
+ background: linear-gradient(135deg, #0f0f0f 0%, #b31217 45%, #ff4d4d 100%);
+  /* background: var(--red); */
   color: #fff;
   font-family: var(--display);
   font-weight: 600;
