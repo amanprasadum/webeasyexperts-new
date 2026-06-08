@@ -26,7 +26,7 @@
 /* ── CRITICAL: prevent horizontal overflow everywhere ── */
 html,
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   max-width: 100%;
 }
 
