@@ -29,6 +29,16 @@ body {
   /* overflow-x: hidden; */
   max-width: 100%;
 }
+/* Prevent images and videos from breaking layouts */
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent padding/borders from adding extra width */
+* {
+  box-sizing: border-box;
+}
 
 *,
 *::before,
