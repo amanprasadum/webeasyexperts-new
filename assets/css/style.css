@@ -23,6 +23,7 @@
   --nav-h: 70px;
 }
 
+
 /* ── CRITICAL: prevent horizontal overflow everywhere ── */
 html,
 body {
