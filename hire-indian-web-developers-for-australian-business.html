@@ -1,784 +1,2048 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Design &amp; Development Services in Australia | Web EASY Experts</title>
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PFD9CDQP');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom & Scalable Website Experts—Built for Businesses Worldwide</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
 
-<!-- Bootstrap 5 -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap Icons (professional icon set, no emoji) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-  :root{
-    --city-page-ink: #131316;
-    --city-page-red: #E31E2B;
-    --city-page-red-soft: rgba(227,30,43,.10);
-    --city-page-maroon: #7A0F16;
-    --city-page-tint: #FFF3F3;
-    --city-page-slate: #63636B;
-    --city-page-white: #FFFFFF;
-    --city-page-border: #EFE7E7;
-    --city-page-radius: 20px;
-    --city-page-radius-sm: 14px;
-  }
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
-  .city-page{
-    font-family: 'Inter', sans-serif;
-    color: var(--city-page-ink);
-    background: var(--city-page-white);
-    overflow-x: hidden;
-  }
-  .city-page h1, .city-page h2, .city-page h3, .city-page h4{
-    font-family: 'Sora', sans-serif;
-    font-weight: 700;
-    color: var(--city-page-ink);
-  }
-  .city-page p{
-    color: var(--city-page-slate);
-    line-height: 1.75;
-  }
-  .city-page .city-page-section{
-    padding: 6rem 0;
-    position: relative;
-  }
-  .city-page .city-page-section--alt{
-    background: var(--city-page-tint);
-  }
+  <!-- Android -->
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/images/android-chrome-512x512.png">
 
-  /* Decorative gradient blobs */
-  .city-page .city-page-blob{
-    position:absolute;
-    border-radius:50%;
-    filter: blur(70px);
-    z-index:0;
-    pointer-events:none;
-  }
+  <meta name="description"
+    content="Web EASY Experts—A team of expert website designers and developers from India, delivering custom, scalable, and SEO-friendly websites for businesses worldwide.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
-  /* Badge / eyebrow */
-  .city-page .city-page-eyebrow{
-    font-family: 'Sora', sans-serif;
-    font-size: .8rem;
-    font-weight: 600;
-    color: var(--city-page-red);
-    background: var(--city-page-tint);
-    border: 1px solid #FBD3D5;
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .45rem 1rem;
-    border-radius: 999px;
-    margin-bottom: 1.25rem;
-  }
-  .city-page .city-page-eyebrow i{ font-size: .95rem; }
-
-  /* Section title with accent underline */
-  .city-page .city-page-section-title{
-    font-size: clamp(1.6rem, 2.8vw, 2.1rem);
-    font-weight: 800;
-    margin-bottom: .9rem;
-    position: relative;
-  }
-  .city-page .city-page-section-lead{ max-width: 760px; }
-
-  /* Buttons */
-  .city-page .city-page-btn{
-    font-family: 'Sora', sans-serif;
-    font-weight: 600;
-    font-size: .95rem;
-    padding: .9rem 2.1rem;
-    border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    gap: .6rem;
-    border: 1px solid transparent;
-  }
-  .city-page .city-page-btn--primary{
-    background: linear-gradient(135deg, #1a1a1a 0%, var(--city-page-maroon) 55%, var(--city-page-red) 130%);
-    color: var(--city-page-white);
-    box-shadow: 0 18px 34px -14px rgba(122,15,22,.55);
-  }
-  .city-page .city-page-btn--outline{
-    background: var(--city-page-white);
-    border-color: var(--city-page-border);
-    color: var(--city-page-ink);
-  }
-
-  /* ===== Hero ===== */
-  .city-page .city-page-hero{
-    padding: 6.5rem 0 5.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .city-page .city-page-hero-content{ position: relative; z-index: 1; }
-  .city-page .city-page-hero h1{
-    font-size: clamp(2.2rem, 4.2vw, 3.1rem);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -.01em;
-  }
-  .city-page .city-page-hero h1 .city-page-highlight{
-    background: linear-gradient(100deg, var(--city-page-red), var(--city-page-maroon));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .city-page .city-page-hero h2{
-    color: var(--city-page-ink);
-    font-size: 1.15rem;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
-    margin: 1rem 0 1.1rem;
-    opacity: .78;
-  }
-  .city-page .city-page-hero p{
-    color: var(--city-page-slate);
-    font-size: 1.03rem;
-    max-width: 46ch;
-  }
-  .city-page .city-page-hero-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap: .9rem;
-    margin-top: 2rem;
-  }
-
-  /* Browser-chrome mockup */
-  .city-page .city-page-mockup{
-    position: relative;
-    z-index: 1;
-    background: var(--city-page-white);
-    border: 1px solid var(--city-page-border);
-    border-radius: var(--city-page-radius);
-    overflow: hidden;
-    box-shadow: 0 40px 80px -30px rgba(19,19,22,.28);
-  }
-  .city-page .city-page-mockup-bar{
-    display:flex;
-    align-items:center;
-    gap: .4rem;
-    padding: .8rem 1rem;
-    border-bottom: 1px solid var(--city-page-border);
-    background: #FAFAFA;
-  }
-  .city-page .city-page-mockup-dot{
-    width: 9px; height: 9px; border-radius: 50%;
-    background: #E2DEDE;
-  }
-  .city-page .city-page-mockup-url{
-    flex: 1;
-    height: 22px;
-    margin-left: .6rem;
-    background: var(--city-page-white);
-    border: 1px solid var(--city-page-border);
-    border-radius: 999px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color: var(--city-page-slate);
-    font-size: .7rem;
-  }
-  .city-page .city-page-mockup img{ width:100%; display:block; }
-
-  /* ===== Bento grid (Why choose us) ===== */
-  .city-page .city-page-bento{ position: relative; z-index: 1; }
-  .city-page .city-page-bento-card{
-    background: var(--city-page-white);
-    border: 1px solid var(--city-page-border);
-    border-radius: var(--city-page-radius-sm);
-    box-shadow: 0 14px 34px -22px rgba(19,19,22,.18);
-    padding: 1.7rem;
-    height: 100%;
-  }
-  .city-page .city-page-bento-card--feature{
-    background: linear-gradient(160deg, var(--city-page-white) 0%, var(--city-page-tint) 100%);
-    padding: 2.2rem;
-  }
-  .city-page .city-page-bento-icon{
-    width: 50px; height: 50px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, var(--city-page-red-soft) 0%, rgba(227,30,43,.03) 100%);
-    color: var(--city-page-red);
-    display:flex; align-items:center; justify-content:center;
-    font-size: 1.3rem;
-    margin-bottom: 1.1rem;
-  }
-  .city-page .city-page-bento-card--feature .city-page-bento-icon{
-    width: 58px; height: 58px;
-    border-radius: 16px;
-    font-size: 1.5rem;
-  }
-  .city-page .city-page-bento-card h4{ font-size: 1.05rem; margin-bottom: .45rem; }
-  .city-page .city-page-bento-card--feature h4{ font-size: 1.3rem; }
-  .city-page .city-page-bento-card p{ font-size: .92rem; margin-bottom: 0; }
-
-  /* ===== Process (route) ===== */
-  .city-page .city-page-process{ position: relative; }
-  .city-page .city-page-process-track{
-    position:absolute; top: 27px; left: 0; right: 0; height: 2px;
-    background-image: linear-gradient(to right, var(--city-page-border) 60%, transparent 0%);
-    background-size: 14px 2px; background-repeat: repeat-x;
-    display:none;
-  }
-  @media (min-width:992px){ .city-page .city-page-process-track{ display:block; } }
-  .city-page .city-page-process-step{ position: relative; text-align:left; }
-  .city-page .city-page-process-number{
-    width: 54px; height: 54px; border-radius: 16px;
-    background: linear-gradient(135deg, #1a1a1a 0%, var(--city-page-maroon) 100%);
-    color: var(--city-page-white);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Sora', sans-serif; font-weight:700; font-size: 1.1rem;
-    margin-bottom: 1.15rem; position: relative; z-index: 1;
-    box-shadow: 0 14px 26px -12px rgba(122,15,22,.45);
-  }
-  .city-page .city-page-process-step h4{ font-size: 1.03rem; margin-bottom: .5rem; }
-  .city-page .city-page-process-step p{ font-size: .92rem; }
-
-  /* ===== Cities grid ===== */
-  .city-page .city-page-city-chip{
-    display:flex; align-items:center; gap: .6rem;
-    background: var(--city-page-white);
-    border: 1px solid var(--city-page-border);
-    border-radius: var(--city-page-radius-sm);
-    box-shadow: 0 10px 24px -18px rgba(19,19,22,.18);
-    padding: 1rem 1.1rem;
-    font-family:'Sora', sans-serif; font-weight:600; font-size: .95rem;
-    color: var(--city-page-ink); height: 100%;
-  }
-  .city-page .city-page-city-chip .city-page-city-dot{
-    width: 34px; height:34px; border-radius: 10px;
-    background: var(--city-page-red-soft);
-    color: var(--city-page-red);
-    display:flex; align-items:center; justify-content:center;
-    font-size: 1rem;
-  }
-
-  /* ===== Tasmania spotlight ===== */
-  .city-page .city-page-spotlight{
-    background: linear-gradient(135deg, #17171b 0%, var(--city-page-maroon) 140%);
-    color: var(--city-page-white);
-    border-radius: var(--city-page-radius);
-    padding: 3.2rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .city-page .city-page-spotlight h2{ color: var(--city-page-white); }
-  .city-page .city-page-spotlight p{ color: rgba(255,255,255,.78); }
-  .city-page .city-page-spotlight ul{ list-style:none; padding:0; margin: 1.6rem 0; }
-  .city-page .city-page-spotlight ul li{
-    display:flex; align-items:center; gap: .8rem;
-    padding: .65rem 0; color: rgba(255,255,255,.92); font-size: .96rem;
-    border-bottom: 1px solid rgba(255,255,255,.12);
-  }
-  .city-page .city-page-spotlight ul li:last-child{ border-bottom:none; }
-  .city-page .city-page-spotlight ul li .city-page-spotlight-check{
-    width: 26px; height: 26px; border-radius: 8px;
-    background: rgba(255,255,255,.12);
-    color: var(--city-page-white);
-    display:flex; align-items:center; justify-content:center;
-    font-size: .85rem; flex: 0 0 auto;
-  }
-
-  /* ===== Features grid ===== */
-  .city-page .city-page-feature-card{
-    display:flex; align-items:center; gap: .8rem;
-    background: var(--city-page-white);
-    border: 1px solid var(--city-page-border);
-    border-radius: var(--city-page-radius-sm);
-    box-shadow: 0 10px 24px -18px rgba(19,19,22,.16);
-    padding: .95rem 1.1rem;
-    height: 100%;
-  }
-  .city-page .city-page-feature-card i{
-    width: 34px; height: 34px; border-radius: 10px; flex: 0 0 auto;
-    background: var(--city-page-red-soft);
-    color: var(--city-page-red);
-    display:flex; align-items:center; justify-content:center;
-    font-size: .95rem;
-  }
-  .city-page .city-page-feature-card span{
-    font-size: .9rem; color: var(--city-page-ink); font-weight: 500;
-  }
-
-  /* ===== Tech stack ===== */
-  .city-page .city-page-tech-card{
-    background: var(--city-page-white);
-    border: 1px solid var(--city-page-border);
-    border-radius: var(--city-page-radius-sm);
-    box-shadow: 0 12px 28px -20px rgba(19,19,22,.18);
-    padding: 1.5rem 1.1rem;
-    text-align:center;
-    height: 100%;
-  }
-  .city-page .city-page-tech-card i{
-    font-size: 1.35rem; color: var(--city-page-red);
-    width: 48px; height: 48px; border-radius: 14px;
-    background: var(--city-page-red-soft);
-    display:flex; align-items:center; justify-content:center;
-    margin: 0 auto .8rem;
-  }
-  .city-page .city-page-tech-card span{
-    font-family:'Sora', sans-serif; font-weight:600; font-size: .88rem; color: var(--city-page-ink);
-  }
-
-  /* ===== Industries ===== */
-  .city-page .city-page-industry-pill{
-    display:inline-flex; align-items:center; gap: .5rem;
-    background: var(--city-page-white);
-    border: 1px solid var(--city-page-border);
-    border-radius: 999px;
-    padding: .6rem 1.15rem;
-    font-size: .9rem; font-weight: 500; color: var(--city-page-ink);
-  }
-  .city-page .city-page-industry-pill i{ color: var(--city-page-red); }
-
-  /* ===== Testimonials ===== */
-  .city-page .city-page-testimonial{
-    background: var(--city-page-white);
-    border: 1px solid var(--city-page-border);
-    border-radius: var(--city-page-radius);
-    box-shadow: 0 20px 40px -26px rgba(19,19,22,.2);
-    padding: 2.2rem;
-    height: 100%;
-    position: relative;
-  }
-  .city-page .city-page-testimonial i.bi-quote{
-    font-size: 1.4rem; color: var(--city-page-maroon);
-    display:flex; align-items:center; justify-content:center;
-    width: 44px; height: 44px; border-radius: 12px;
-    background: var(--city-page-tint);
-    margin-bottom: 1.2rem;
-  }
-  .city-page .city-page-testimonial p{
-    color: var(--city-page-ink); font-size: 1.02rem; font-style: italic;
-  }
-  .city-page .city-page-testimonial-author{ display:flex; align-items:center; gap: .7rem; margin-top: 1.4rem; }
-  .city-page .city-page-testimonial-avatar{ width: 44px; height: 44px; border-radius: 50%; overflow:hidden; flex: 0 0 auto; }
-  .city-page .city-page-testimonial-avatar img{ width:100%; height:100%; object-fit:cover; }
-  .city-page .city-page-testimonial-author strong{ display:block; font-size: .92rem; color: var(--city-page-ink); }
-  .city-page .city-page-testimonial-author small{ color: var(--city-page-slate); }
-
-  /* ===== Guarantee ===== */
-  .city-page .city-page-guarantee{
-    background: var(--city-page-white);
-    border-radius: var(--city-page-radius);
-    padding: 3.2rem;
-    border: 1px solid var(--city-page-border);
-    box-shadow: 0 20px 50px -30px rgba(19,19,22,.2);
-  }
-  .city-page .city-page-guarantee-icon{
-    width: 66px; height: 66px; border-radius: 18px;
-    background: linear-gradient(135deg, #1a1a1a 0%, var(--city-page-maroon) 100%);
-    color: var(--city-page-white);
-    display:flex; align-items:center; justify-content:center;
-    font-size: 1.7rem; margin-bottom: 1.3rem;
-    box-shadow: 0 16px 30px -14px rgba(122,15,22,.5);
-  }
-
-  /* ===== Final CTA ===== */
-  .city-page .city-page-cta{
-    background: linear-gradient(135deg, #17171b 0%, var(--city-page-maroon) 55%, var(--city-page-red) 140%);
-    color: var(--city-page-white);
-    border-radius: var(--city-page-radius);
-    padding: 3.8rem;
-    text-align:center;
-    position: relative;
-    overflow: hidden;
-  }
-  .city-page .city-page-cta h2{ color: var(--city-page-white); }
-  .city-page .city-page-cta p{ color: rgba(255,255,255,.85); }
-  .city-page .city-page-cta-content{ position: relative; z-index: 1; }
-</style>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 </head>
+
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFD9CDQP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-<!-- ================= YOUR EXISTING HEADER GOES HERE ================= -->
+  <!-- ══════ TOPBAR ══════ -->
+  <div class="topbar">
+    <strong>Serving Businesses Worldwide</strong> &nbsp;·&nbsp; Free Website Audit — <a href="#contact">Claim Now
+      →</a>
+  </div>
 
-<main class="city-page">
+  <!-- ══════ NAVBAR ══════ -->
+  <nav class="main-navbar d-flex align-items-center px-3 px-md-0" id="mainNav">
+    <div class="container d-flex align-items-center">
+      <!-- <a class="navbar-brand me-4" href="#">
+        <div class="brand-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>Web EASY Experts
+      </a> -->
+      <a class="navbar-brand me-4 logo-shine" href="#">
+        <img src="assets/images/logo.png" srcset="" alt="Web EASY Experts" style="height:60px;object-fit:contain">
+      </a>
 
-  <!-- Hero Section -->
-  <section class="city-page-hero">
-    <div class="city-page-blob" style="width:420px;height:420px;top:-120px;right:-80px;background:radial-gradient(circle,rgba(227,30,43,.20),transparent 70%);"></div>
-    <div class="city-page-blob" style="width:320px;height:320px;bottom:-100px;right:20%;background:radial-gradient(circle,rgba(122,15,22,.14),transparent 70%);"></div>
+      <!-- Desktop nav -->
+      <div class="d-none d-lg-flex align-items-center gap-1 flex-grow-1 justify-content-center">
+        <div class="mega-parent">
+          <span class="nav-link-item">Services <i class="bi bi-chevron-down chevron"></i></span>
+          <div class="mega-bridge"></div>
+          <!-- SERVICES MEGA MENU -->
+          <div class="mega-menu">
+            <div class="container">
+              <div class="row g-4">
+
+                <!-- Col 1: Website Design + Website Development -->
+                <div class="col-lg-3">
+                  <div class="mega-scroll-col">
+                    <div class="mega-col-head">Website Design</div>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-red"><i class="bi bi-laptop"></i></div>
+                      <div>
+                        <div class="mega-link-title">Custom Design & Development</div>
+                        <div class="mega-link-desc">Tailor-made, conversion-focused websites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-blue"><i class="bi bi-phone"></i></div>
+                      <div>
+                        <div class="mega-link-title">Responsive Web Design</div>
+                        <div class="mega-link-desc">Flawless on every device & screen size</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-green"><i class="bi bi-layout-text-window"></i></div>
+                      <div>
+                        <div class="mega-link-title">Landing Page Design</div>
+                        <div class="mega-link-desc">High-converting pages built to sell</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-amber"><i class="bi bi-arrow-repeat"></i></div>
+                      <div>
+                        <div class="mega-link-title">Website Redesign Services</div>
+                        <div class="mega-link-desc">Modernise your outdated website fast</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-violet"><i class="bi bi-search"></i></div>
+                      <div>
+                        <div class="mega-link-title">SEO Optimized Web Design</div>
+                        <div class="mega-link-desc">Rank-ready structure from day one</div>
+                      </div>
+                    </a>
+
+                    <div class="mega-group-gap"></div>
+                    <div class="mega-col-head">Website Development</div>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-sky"><i class="bi bi-filetype-html"></i></div>
+                      <div>
+                        <div class="mega-link-title">HTML Website Development</div>
+                        <div class="mega-link-desc">Clean, fast, hand-coded HTML sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-blue"><i class="bi bi-wordpress"></i></div>
+                      <div>
+                        <div class="mega-link-title">WordPress Development</div>
+                        <div class="mega-link-desc">Flexible CMS for any business type</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-teal"><i class="bi bi-grid-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Wix Website Development</div>
+                        <div class="mega-link-desc">Beautiful Wix sites, built professionally</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-green"><i class="bi bi-bag-check"></i></div>
+                      <div>
+                        <div class="mega-link-title">Shopify Development</div>
+                        <div class="mega-link-desc">Full-featured Shopify stores</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-slate"><i class="bi bi-circle-square"></i></div>
+                      <div>
+                        <div class="mega-link-title">Squarespace Development</div>
+                        <div class="mega-link-desc">Sleek Squarespace builds & customisation</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Col 2: eCommerce + Support & Maintenance -->
+                <div class="col-lg-3">
+                  <div class="mega-scroll-col">
+                    <div class="mega-col-head">eCommerce Solutions</div>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-orange"><i class="bi bi-cart4"></i></div>
+                      <div>
+                        <div class="mega-link-title">eCommerce Web Store</div>
+                        <div class="mega-link-desc">Full store setup, payment & delivery</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-violet"><i class="bi bi-shop-window"></i></div>
+                      <div>
+                        <div class="mega-link-title">WooCommerce Stores</div>
+                        <div class="mega-link-desc">WordPress-powered online stores</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-green"><i class="bi bi-bag-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Shopify Stores</div>
+                        <div class="mega-link-desc">Fast, scalable Shopify storefronts</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-teal"><i class="bi bi-credit-card-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Payment Gateway Integration</div>
+                        <div class="mega-link-desc">Razorpay, Stripe, PayPal & more</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-sky"><i class="bi bi-robot"></i></div>
+                      <div>
+                        <div class="mega-link-title">Chatbot Integration</div>
+                        <div class="mega-link-desc">AI chatbots for 24/7 lead capture</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-green"><i class="bi bi-whatsapp"></i></div>
+                      <div>
+                        <div class="mega-link-title">WhatsApp Chat Integration</div>
+                        <div class="mega-link-desc">One-click WhatsApp for instant enquiries</div>
+                      </div>
+                    </a>
+
+                    <div class="mega-group-gap"></div>
+                    <div class="mega-col-head">Support & Maintenance</div>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-slate"><i class="bi bi-tools"></i></div>
+                      <div>
+                        <div class="mega-link-title">Website Maintenance & Support</div>
+                        <div class="mega-link-desc">Regular updates, fixes & improvements</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-red"><i class="bi bi-shield-lock-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Website Security and Backups</div>
+                        <div class="mega-link-desc">Keep your site safe & recoverable</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-amber"><i class="bi bi-speedometer2"></i></div>
+                      <div>
+                        <div class="mega-link-title">Performance Optimisation</div>
+                        <div class="mega-link-desc">Faster load times, better Core Web Vitals</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Col 3: Portfolio -->
+                <div class="col-lg-3">
+                  <div class="mega-scroll-col">
+                    <div class="mega-col-head">Portfolio Websites</div>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-pink"><i class="bi bi-grid-1x2-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Portfolio Website Designs</div>
+                        <div class="mega-link-desc">Showcase your work beautifully online</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-violet"><i class="bi bi-box-seam-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Product Showcase Website</div>
+                        <div class="mega-link-desc">Display products with style & detail</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-rose"><i class="bi bi-play-circle-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Video Showcase Website</div>
+                        <div class="mega-link-desc">Video-first sites for creators & brands</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-cyan"><i class="bi bi-camera-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Photo Showcase Website</div>
+                        <div class="mega-link-desc">Stunning galleries for photographers</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Col 4: Promo panel (same as before) -->
+                <div class="col-lg-3 d-flex">
+                  <div class="mega-promo w-100">
+                    <div class="mb-3"><i class="bi bi-award-fill" style="font-size:1.5rem;opacity:.8"></i></div>
+                    <h5>Free Website Audit</h5>
+                    <p>Get a detailed SEO + performance report for your website — completely free, no strings attached.
+                    </p>
+                    <a href="#contact" class="btn">Claim Free Audit <i class="bi bi-arrow-right ms-1"></i></a>
+                    <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.2)">
+                      <div style="font-size:0.72rem;opacity:0.85;margin-bottom:0.35rem">⚡ Reply within 2 hours</div>
+                      <div style="font-size:0.72rem;opacity:0.85;margin-bottom:0.35rem">✅ 500+ Projects Delivered</div>
+                      <div style="font-size:0.72rem;opacity:0.85">🌍 Serving Clients Worldwide</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INDUSTRIES MEGA MENU -->
+        <div class="mega-parent">
+          <span class="nav-link-item">Industries <i class="bi bi-chevron-down chevron"></i></span>
+          <div class="mega-bridge"></div>
+          <div class="mega-menu">
+            <div class="container">
+              <div class="row g-4">
+
+                <!-- Col 1: Industries A–K -->
+                <div class="col-lg-3">
+                  <div class="mega-scroll-col">
+                    <div class="mega-col-head">Industries We Serve</div>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-green"><i class="bi bi-hospital-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Healthcare</div>
+                        <div class="mega-link-desc">Doctor portals, clinic & hospital websites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-orange"><i class="bi bi-cup-hot-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Restaurant & Food</div>
+                        <div class="mega-link-desc">Menu sites, ordering & reservation pages</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-blue"><i class="bi bi-building"></i></div>
+                      <div>
+                        <div class="mega-link-title">Real Estate</div>
+                        <div class="mega-link-desc">Property listing & lead-gen sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-slate"><i class="bi bi-briefcase-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Corporate Business</div>
+                        <div class="mega-link-desc">Professional company websites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-amber"><i class="bi bi-mortarboard-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Education & EdTech</div>
+                        <div class="mega-link-desc">School, college & eLearning platforms</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-violet"><i class="bi bi-person-badge-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Personal Portfolio</div>
+                        <div class="mega-link-desc">Showcase your work & skills online</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-red"><i class="bi bi-bag-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Retail Business</div>
+                        <div class="mega-link-desc">D2C stores with high conversion</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-sky"><i class="bi bi-airplane-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Travel & Tourism</div>
+                        <div class="mega-link-desc">Tour packages, booking & travel sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-teal"><i class="bi bi-heart-pulse-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Personal Training</div>
+                        <div class="mega-link-desc">Fitness coaches, gyms & wellness sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-slate"><i class="bi bi-bank2"></i></div>
+                      <div>
+                        <div class="mega-link-title">Law Firm</div>
+                        <div class="mega-link-desc">Legal services & attorney websites</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Col 2: Industries L–Z -->
+                <div class="col-lg-3">
+                  <div class="mega-scroll-col">
+                    <div class="mega-col-head" style="opacity:0">—</div>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-blue"><i class="bi bi-calculator-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Financial Accounting</div>
+                        <div class="mega-link-desc">CA firms, fintech & NBFC websites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-pink"><i class="bi bi-calendar-event-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Event Management</div>
+                        <div class="mega-link-desc">Event agencies & wedding planners</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-orange"><i class="bi bi-car-front-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Automotive</div>
+                        <div class="mega-link-desc">Dealerships, garages & auto services</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-green"><i class="bi bi-people-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">NGO / Non-Profit</div>
+                        <div class="mega-link-desc">Charity & cause-driven websites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-rose"><i class="bi bi-stars"></i></div>
+                      <div>
+                        <div class="mega-link-title">Beauty Salon</div>
+                        <div class="mega-link-desc">Salon, spa & beauty service sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-amber"><i class="bi bi-building-fill-gear"></i></div>
+                      <div>
+                        <div class="mega-link-title">Construction Company</div>
+                        <div class="mega-link-desc">Builder & contractor company sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-teal"><i class="bi bi-compass-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Architecture</div>
+                        <div class="mega-link-desc">Architect portfolio & studio sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-violet"><i class="bi bi-camera-reels-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Entertainment</div>
+                        <div class="mega-link-desc">Media, talent & production sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-pink"><i class="bi bi-bag-heart-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Fashion & Lifestyle</div>
+                        <div class="mega-link-desc">Brand, influencer & fashion sites</div>
+                      </div>
+                    </a>
+                    <a href="#" class="mega-link">
+                      <div class="mega-icon mi-sky"><i class="bi bi-truck-front-fill"></i></div>
+                      <div>
+                        <div class="mega-link-title">Transport Company</div>
+                        <div class="mega-link-desc">Fleet, logistics & moving services</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Col 3+4: Video Showcase -->
+                <div class="col-lg-6">
+                  <div class="mega-col-head"><i class="bi bi-play-circle-fill me-1"></i>See Our Work in Action</div>
+
+                  <!-- Video card 1 -->
+                  <div class="mega-video-card mb-3">
+                    <div class="mega-video-thumb" onclick="openMegaVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                      <div class="mega-video-overlay">
+                        <div class="mega-play-btn"><i class="bi bi-play-fill"></i></div>
+                      </div>
+                      <div class="mega-video-thumb-bg" style="background:linear-gradient(135deg,#1E3A5F,#2563EB)">
+                        <i class="bi bi-globe2" style="font-size:3rem;opacity:0.15;color:#fff"></i>
+                      </div>
+                    </div>
+                    <div class="mega-video-info">
+                      <div class="mega-video-tag">Website Design</div>
+                      <div class="mega-video-title">How We Build Modern Business Websites</div>
+                      <div class="mega-video-meta"><i class="bi bi-play-circle me-1"></i>3:45 min</div>
+                    </div>
+                  </div>
+
+                  <!-- Video card 2 -->
+                  <div class="mega-video-card">
+                    <div class="mega-video-thumb" onclick="openMegaVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                      <div class="mega-video-overlay">
+                        <div class="mega-play-btn"><i class="bi bi-play-fill"></i></div>
+                      </div>
+                      <div class="mega-video-thumb-bg" style="background:linear-gradient(135deg,#064E3B,#16A34A)">
+                        <i class="bi bi-search" style="font-size:3rem;opacity:0.15;color:#fff"></i>
+                      </div>
+                    </div>
+                    <div class="mega-video-info">
+                      <div class="mega-video-tag" style="background:#F0FDF4;color:#16A34A;">Digital Marketing</div>
+                      <div class="mega-video-title">SEO & Google Ads Strategy That Gets Results</div>
+                      <div class="mega-video-meta"><i class="bi bi-play-circle me-1"></i>4:20 min</div>
+                    </div>
+                  </div>
+
+                  <!-- Book meeting CTA inside mega -->
+                  <div class="mt-3 p-2 rounded-3 d-flex align-items-center justify-content-between"
+                    style="background:var(--red-lt);border:1px solid rgba(229,57,53,0.2)">
+                    <div style="font-family:var(--display);font-size:0.8rem;font-weight:600;color:var(--t900)"><i
+                        class="bi bi-calendar-check-fill text-danger me-2"></i>Ready to discuss your project?</div>
+                    <a href="#book-meeting" class="btn-brand btn"
+                      style="font-size:0.75rem;padding:0.32rem 0.85rem;white-space:nowrap">Book Free Meeting <i
+                        class="bi bi-arrow-right ms-1"></i></a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <a href="#portfolio" class="nav-link-item">Portfolio</a>
+        <a href="#pricing" class="nav-link-item">Pricing</a> -->
+        <a href="#blog" class="nav-link-item">Blog</a>
+        <a href="contact-us.html" class="nav-link-item">Contact</a>
+        <!-- <a href="#book-meeting" class="nav-link-item" style="color:var(--red);font-weight:600"><i
+            class="bi bi-calendar-check-fill me-1"></i>Book Meeting</a> -->
+      </div>
+
+      <div class="d-none d-lg-flex align-items-center gap-2 ms-auto">
+        <a href="tel:+919432120437" class="btn-outline-soft btn d-flex align-items-center gap-2"><i
+            class="bi bi-telephone-fill text-danger"></i> +91 94321 20437</a>
+        <a href="#book-meeting" class="btn-brand btn">Book Free Meeting <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#mobileNav" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════ MOBILE NAV — Full with all links & accordions ══════ -->
+  <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileNav" style="width:min(320px,100vw)">
+
+    <div class="offcanvas-body px-4 py-2" style="overflow-y:auto">
+
+      <!-- Services accordion -->
+      <div class="mob-link" id="mobServicesToggle">
+        <span><i class="bi bi-grid-1x2-fill text-danger"></i> Services</span>
+        <i class="bi bi-chevron-down mob-chevron"></i>
+      </div>
+      <div class="mob-sub" id="mobServicesSub">
+        <div class="mob-sub-head">Website Design</div>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-laptop"></i> Custom Design
+          & Development</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-phone"></i> Responsive Web
+          Design</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-layout-text-window"></i>
+          Landing Page Design</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-arrow-repeat"></i> Website
+          Redesign Services</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-search"></i> SEO Optimized
+          Web Design</a>
+        <div class="mob-sub-head">Website Development</div>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-filetype-html"></i> HTML
+          Website Development</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-wordpress"></i> WordPress
+          Development</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-grid-fill"></i> Wix Website
+          Development</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-shop"></i> Shopify
+          Development</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-circle-square"></i>
+          Squarespace Development</a>
+        <div class="mob-sub-head">eCommerce Solutions</div>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-cart4"></i> eCommerce Web
+          Store</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-shop-window"></i>
+          WooCommerce Stores</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-bag-check"></i> Shopify
+          Stores</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-credit-card-fill"></i>
+          Payment Gateway Integration</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-robot"></i> Chatbot
+          Integration</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-whatsapp"></i> WhatsApp
+          Chat Integration</a>
+        <div class="mob-sub-head">Support & Maintenance</div>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-tools"></i> Website
+          Maintenance & Support</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-shield-lock-fill"></i>
+          Security and Backups</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-speedometer2"></i>
+          Performance Optimisation</a>
+        <div class="mob-sub-head">Portfolio Websites</div>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-grid-1x2-fill"></i>
+          Portfolio Website Designs</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-box-seam-fill"></i> Product
+          Showcase Website</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-play-circle-fill"></i>
+          Video Showcase Website</a>
+        <a href="#services" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-camera-fill"></i> Photo
+          Showcase Website</a>
+      </div>
+
+      <!-- Industries accordion -->
+      <div class="mob-link" id="mobIndustriesToggle">
+        <span><i class="bi bi-diagram-3-fill text-danger"></i> Industries</span>
+        <i class="bi bi-chevron-down mob-chevron"></i>
+      </div>
+      <div class="mob-sub" id="mobIndustriesSub">
+        <div class="mob-sub-head">Industries We Serve</div>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-hospital-fill"></i> Healthcare</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-cup-hot-fill"></i> Restaurant &
+          Food</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-building"></i> Real Estate</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-briefcase-fill"></i> Corporate
+          Business</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-mortarboard-fill"></i>
+          Education</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-person-badge-fill"></i> Personal
+          Portfolio</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-bag-fill"></i> Retail Business</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-airplane-fill"></i> Travel &
+          Tourism</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-heart-pulse-fill"></i> Personal
+          Training</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-bank2"></i> Law Firm</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-calculator-fill"></i> Financial
+          Accounting</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-calendar-event-fill"></i> Event
+          Management</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-car-front-fill"></i> Automotive</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-people-fill"></i> NGO /
+          Non-Profit</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-stars"></i> Beauty Salon</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-building-fill-gear"></i>
+          Construction Company</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-compass-fill"></i> Architecture</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-camera-reels-fill"></i>
+          Entertainment</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-bag-heart-fill"></i> Fashion &
+          Lifestyle</a>
+        <a href="#" class="mob-sub-link" data-bs-dismiss="offcanvas"><i class="bi bi-truck-front-fill"></i> Transport
+          Company</a>
+      </div>
+
+      <!-- Plain links -->
+      <a href="#portfolio" class="mob-plain" data-bs-dismiss="offcanvas"><i class="bi bi-images text-danger"></i>
+        Portfolio</a>
+      <a href="#pricing" class="mob-plain" data-bs-dismiss="offcanvas"><i class="bi bi-tag-fill text-danger"></i>
+        Pricing</a>
+      <a href="#blog" class="mob-plain" data-bs-dismiss="offcanvas"><i class="bi bi-journal-richtext text-danger"></i>
+        Blog</a>
+      <a href="#faq" class="mob-plain" data-bs-dismiss="offcanvas"><i
+          class="bi bi-question-circle-fill text-danger"></i> FAQ</a>
+      <a href="#book-meeting" class="mob-plain" data-bs-dismiss="offcanvas" style="color:var(--red);font-weight:700"><i
+          class="bi bi-calendar-check-fill text-danger"></i> Book Free Meeting</a>
+      <a href="contact-us.html" class="mob-plain" data-bs-dismiss="offcanvas"><i
+          class="bi bi-envelope-fill text-danger"></i>
+        Contact</a>
+
+      <div class="mt-4 d-flex flex-column gap-2 pb-4">
+        <a href="tel:+919432120437" class="btn btn-outline-soft w-100"><i
+            class="bi bi-telephone-fill me-2 text-danger"></i>+91 94321 20437</a>
+        <a href="https://wa.me/919432120437" class="btn w-100"
+          style="background:#25D366;color:#fff;border-radius:10px;font-family:var(--display);font-weight:600"
+          target="_blank"><i class="bi bi-whatsapp me-2"></i>WhatsApp Us</a>
+        <a href="#contact" class="btn btn-brand w-100" data-bs-dismiss="offcanvas">Get Free Quote <i
+            class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ HERO ══════ -->
+  <section class="hero-section">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-6 city-page-hero-content">
-          <span class="city-page-eyebrow"><i class="bi bi-geo-alt"></i>Australia Wide Web Design</span>
-          <h1>Build a Website That <span class="city-page-highlight">Turns Visitors into Customers</span></h1>
-          <h2>Hire Skilled Indian Websites Developers &amp; Designers for Your Australian Business</h2>
-          <p>Web EASY Experts&rsquo; skilled team of designers and developers from India is a one-step choice for building lead generating website for the Australian business owners at competitive prices to small or medium-sized businesses.</p>
-          <div class="city-page-hero-actions">
-            <a href="#" class="city-page-btn city-page-btn--primary"><i class="bi bi-send-check"></i>Get a Free Quote</a>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="hero-badge"><i class="bi bi-award-fill"></i> Trusted by Businesses Worldwide</div>
+          <h1 class="hero-title">Custom & Scalable Website Experts<br><span class="accent">Built for Businesses
+              Worldwide</span></h1>
+          <p class="hero-subtitle">A team of expert website designers and developers from India, serving clients
+            worldwide.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-brand">Get a Free Consultentation <i
+                class="bi bi-arrow-right ms-2"></i></a>
+            <a href="#portfolio" class="btn btn-outline-soft d-flex align-items-center gap-2"><i
+                class="bi bi-eye-fill text-danger"></i> View Our Work</a>
           </div>
+          <!-- <div class="hero-trust">
+            <span><i class="bi bi-check-circle-fill text-success"></i> Custom Web Design & Development</span>
+            <span><i class="bi bi-check-circle-fill text-success"></i> Fast, SEO-Friendly & AI-Ready</span>
+            <span><i class="bi bi-check-circle-fill text-success"></i> Built for All Devices & Screen Sizes</span>
+            <span><i class="bi bi-check-circle-fill text-success"></i> Trusted by Global Clients Since 2023</span>
+          </div> -->
         </div>
-        <div class="col-lg-6">
-          <div class="city-page-mockup">
-            <div class="city-page-mockup-bar">
-              <span class="city-page-mockup-dot"></span>
-              <span class="city-page-mockup-dot"></span>
-              <span class="city-page-mockup-dot"></span>
-              <div class="city-page-mockup-url"><i class="bi bi-lock-fill"></i></div>
-            </div>
-            <img src="https://picsum.photos/seed/webeasy-hero/800/600" alt="Website design and development for Australian businesses">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="city-page-section">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-9">
-          <span class="city-page-eyebrow"><i class="bi bi-award"></i>Why Web EASY Experts</span>
-          <h2 class="city-page-section-title">Need Cost effective Website Design &amp; Development Services in Australia</h2>
-          <p>If you are a business owner and want a cost-effective website to promote your offline business in your local city or across Australia, Web EASY Experts is your one-step solution. We have more than 10 years of experienced website designers and developers on our team for delivering world-class websites at highly competitive prices, typically costing between 500 and 15,000+ AUD, depending on the complexity, to businesses all across Australia.</p>
-          <p>We use the latest website development technologies, modern programming languages, and industry best practices to build fast, secure, scalable, and SEO-friendly websites. Our experienced website developers and designers in India provide regular website updates, security patches, performance optimisation, and ongoing technical support, ensuring all our Australian clients websites remain reliable, up-to-date, and ready to help your business grow.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Businesses Trust Us — bento grid -->
-  <section class="city-page-section city-page-section--alt">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8">
-          <span class="city-page-eyebrow"><i class="bi bi-shield-check"></i>Our Advantage</span>
-          <h2 class="city-page-section-title">Why Businesses Across Australia Trust Web EASY Experts For Web Design &amp; Development</h2>
-          <p>Choosing Web EASY Experts means choosing:</p>
-        </div>
-      </div>
-      <div class="row g-4 city-page-bento">
-        <div class="col-lg-6">
-          <div class="city-page-bento-card city-page-bento-card--feature">
-            <div class="city-page-bento-icon"><i class="bi bi-compass"></i></div>
-            <h4>Australian-Focused Strategy</h4>
-            <p>Our strategy is based on your audience and building website that can attract, connect with and convert your target customers from Australia.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="city-page-bento-card">
-            <div class="city-page-bento-icon"><i class="bi bi-people"></i></div>
-            <h4>Platform-Specific Teams</h4>
-            <p>Are you looking for developers with expertise in a specific platform? We have dedicated specialists for WordPress, Shopify, Laravel, ReactJS, and custom PHP.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="city-page-bento-card">
-            <div class="city-page-bento-icon"><i class="bi bi-piggy-bank"></i></div>
-            <h4>Affordable Development</h4>
-            <p>With our team based in India, you can reduce huge cost of website development while still maintaining quality.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="city-page-bento-card">
-            <div class="city-page-bento-icon"><i class="bi bi-graph-up-arrow"></i></div>
-            <h4>Result-Driven Approach</h4>
-            <p>We always use clever design and quality development along with SEO tactics in each of our websites to ensure that customer&rsquo;s business needs are met.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="city-page-bento-card">
-            <div class="city-page-bento-icon"><i class="bi bi-chat-dots"></i></div>
-            <h4>Transparent Communication</h4>
-            <p>From project kickoff to launch, you&rsquo;ll receive regular updates, clear milestones, and responsive communication.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="city-page-bento-card">
-            <div class="city-page-bento-icon"><i class="bi bi-tools"></i></div>
-            <h4>Nominal Maintenance Cost</h4>
-            <p>We build website for the long-term performance with minimal maintenance and easy future updates.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="city-page-bento-card">
-            <div class="city-page-bento-icon"><i class="bi bi-patch-check"></i></div>
-            <h4>No Cost For Minor Changes</h4>
-            <p>We handle small tweaks and adjustments at no extra charge it helps your website continues to meet your expectations.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="city-page-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8">
-          <span class="city-page-eyebrow"><i class="bi bi-signpost-2"></i>How We Work</span>
-          <h2 class="city-page-section-title">Our Web Design &amp; Development Services Process</h2>
-          <p>We follow research and development process to ensure smooth project execution and outstanding results:</p>
-        </div>
-      </div>
-      <div class="city-page-process">
-        <div class="city-page-process-track"></div>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg">
-            <div class="city-page-process-step">
-              <div class="city-page-process-number">1</div>
-              <h4>Discovery &amp; Consultation</h4>
-              <p>We discuss the aspirations, the kind of business that you have the competitors in the market as well as your target audience in Australia.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg">
-            <div class="city-page-process-step">
-              <div class="city-page-process-number">2</div>
-              <h4>Wireframing &amp; Design Concepts</h4>
-              <p>Our purpose of website of designers is to produce layouts and wireframes in accordance with Australian UX best practices as well as the aspect of mobile friendliness.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg">
-            <div class="city-page-process-step">
-              <div class="city-page-process-number">3</div>
-              <h4>Development Phase</h4>
-              <p>Our skilled developers write your website in a clean code and integrate it with CMS or e-Commerce platforms where necessary.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg">
-            <div class="city-page-process-step">
-              <div class="city-page-process-number">4</div>
-              <h4>Quality Testing &amp; Optimization</h4>
-              <p>Before launching the website, we make tests across the devices and browsers and take care of the speed and other things involved.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg">
-            <div class="city-page-process-step">
-              <div class="city-page-process-number">5</div>
-              <h4>Launch &amp; Ongoing Support</h4>
-              <p>We launch your website after getting the approval and continue our assistance as long as your company grows.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cities we serve -->
-  <section class="city-page-section city-page-section--alt">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8">
-          <span class="city-page-eyebrow"><i class="bi bi-map"></i>Where We Work</span>
-          <h2 class="city-page-section-title">Our Top Level Web Design Services in Australia &ndash; Built for Impact</h2>
-          <p>We serve all States &amp;Territories major cities including:</p>
-        </div>
-      </div>
-      <div class="row g-3">
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Sydney</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Melbourne</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Brisbane</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Perth</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Adelaide</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Canberra</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Gold Coast</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Sunshine Coast</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Darwin</div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-city-chip"><span class="city-page-city-dot"><i class="bi bi-geo-alt-fill"></i></span>Alice Springs</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tasmania spotlight -->
-  <section class="city-page-section">
-    <div class="container">
-      <div class="city-page-spotlight">
-        <div class="city-page-blob" style="width:300px;height:300px;top:-80px;right:-60px;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%);"></div>
-        <div class="row align-items-center g-5" style="position:relative;z-index:1;">
-          <div class="col-lg-7">
-            <span class="city-page-eyebrow" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff;"><i class="bi bi-pin-map"></i>Local Spotlight</span>
-            <h2>Tasmania &ndash; We Serve Local Businesses Too</h2>
-            <p>At Web EASY Experts, we&rsquo;re proud to support businesses not just in mainland cities, but also in Tasmania &mdash; including Hobart, Launceston, Devonport, and nearby towns.</p>
-            <p>Whether you&rsquo;re a tourism operator, caf&eacute; owner, tradesperson, or creative agency in Tasmania, we deliver affordable, professionally built websites tailored to your local audience and business goals.</p>
-            <ul>
-              <li><span class="city-page-spotlight-check"><i class="bi bi-check-lg"></i></span>Local search optimized sites in Tasmania</li>
-              <li><span class="city-page-spotlight-check"><i class="bi bi-check-lg"></i></span>Industry-specific web designs in retail, tourism, and trades</li>
-              <li><span class="city-page-spotlight-check"><i class="bi bi-check-lg"></i></span>Rapid project completion with immediate assistance</li>
-              <li><span class="city-page-spotlight-check"><i class="bi bi-check-lg"></i></span>Budget-friendly website services for emerging businesses</li>
-            </ul>
-            <p class="mb-0">You don&rsquo;t need a big-city budget to get a high-performing website. Web EASY Experts brings agency-quality design to businesses across Tasmania.</p>
-          </div>
-          <div class="col-lg-5">
-            <div class="city-page-mockup" style="border-color:rgba(255,255,255,.15);">
-              <img src="https://picsum.photos/seed/tasmania-webeasy/700/560" alt="Local businesses in Tasmania">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section class="city-page-section city-page-section--alt">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8">
-          <span class="city-page-eyebrow"><i class="bi bi-stars"></i>What You Get</span>
-          <h2 class="city-page-section-title">Professional Website Features for Australian Businesses</h2>
-        </div>
-      </div>
-      <div class="row g-3">
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Mobile Responsive Design</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Clean &amp; Modern UI/UX</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Fast Load Speed</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>SEO-Friendly Structure</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Easy Content Management System (CMS)</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Secure Website with SSL Integration</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Cross-Browser Compatibility</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Google Analytics &amp; Search Console Integration</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Conversion-Focused Layout</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>User-Friendly Navigation</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Contact Form &amp; Lead Generation Features</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Optimised Images &amp; Performance</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Social Media Integration</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Google Maps Integration</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Spam-Protected Contact Forms</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Schema Markup Implementation</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Easy Future Updates &amp; Scalability</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Custom Call-to-Action Sections</span></div></div>
-        <div class="col-6 col-md-4 col-lg-3"><div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Blog &amp; News Management</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tech stack -->
-  <section class="city-page-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-9">
-          <span class="city-page-eyebrow"><i class="bi bi-cpu"></i>Technology</span>
-          <h2 class="city-page-section-title">Searching for Website Designers &amp; Developers with Modern Technology Expertise in Australia &ndash; Powered by India&rsquo;s Top Talent</h2>
-          <p>At Web EASY Experts you will get the same quality and creativity you&rsquo;d expect from your website design and developments company in Australia. Whatever you required static sites to large-scale web applications, we deliver high-performance websites that support business growth without the inflated cost. Our remote team works on your schedule, offers regular consultations, and delivers on time.</p>
-          <p>Our developers are fluent in:</p>
-        </div>
-      </div>
-      <div class="row g-3">
-        <div class="col-6 col-md-4 col-lg-2"><div class="city-page-tech-card"><i class="bi bi-code-slash"></i><span>HTML5, CSS3, JS</span></div></div>
-        <div class="col-6 col-md-4 col-lg-2"><div class="city-page-tech-card"><i class="bi bi-wordpress"></i><span>WordPress, WooCommerce</span></div></div>
-        <div class="col-6 col-md-4 col-lg-2"><div class="city-page-tech-card"><i class="bi bi-shop"></i><span>Shopify, Magento, Wix</span></div></div>
-        <div class="col-6 col-md-4 col-lg-2"><div class="city-page-tech-card"><i class="bi bi-diagram-3"></i><span>ReactJS, Angular, Node.js</span></div></div>
-        <div class="col-6 col-md-4 col-lg-2"><div class="city-page-tech-card"><i class="bi bi-server"></i><span>PHP, Laravel, MySQL</span></div></div>
-        <div class="col-6 col-md-4 col-lg-2"><div class="city-page-tech-card"><i class="bi bi-plug"></i><span>API Integrations &amp; More</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Industries -->
-  <section class="city-page-section city-page-section--alt">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8">
-          <span class="city-page-eyebrow"><i class="bi bi-briefcase"></i>Who We Work With</span>
-          <h2 class="city-page-section-title">Trusted by Large and Small Businesses in Australia</h2>
-          <p>We proudly serve startups, SMEs, and enterprises across industries:</p>
-          <p class="fw-semibold mb-3" style="color: var(--city-page-ink);">Industries We Serve:</p>
-        </div>
-      </div>
-      <div class="d-flex flex-wrap gap-2 mb-5">
-        <span class="city-page-industry-pill"><i class="bi bi-bag"></i>Retail &amp; eCommerce</span>
-        <span class="city-page-industry-pill"><i class="bi bi-heart-pulse"></i>Health &amp; Fitness</span>
-        <span class="city-page-industry-pill"><i class="bi bi-house-door"></i>Real Estate</span>
-        <span class="city-page-industry-pill"><i class="bi bi-cone-striped"></i>Construction &amp; Trades</span>
-        <span class="city-page-industry-pill"><i class="bi bi-cash-coin"></i>Finance &amp; Consulting</span>
-        <span class="city-page-industry-pill"><i class="bi bi-cup-hot"></i>Hospitality &amp; Events</span>
-        <span class="city-page-industry-pill"><i class="bi bi-mortarboard"></i>Education &amp; Coaching</span>
-      </div>
-      <div class="row">
-        <div class="col-lg-9">
-          <p>From one-man operations to large enterprises, our experienced website designers and developers combine creativity and technical expertise to deliver outstanding digital solutions.</p>
-          <p class="mb-0">No matter your business size or sector, we bring premium design and tech to your fingertips &mdash; cost-effectively.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="city-page-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-8">
-          <span class="city-page-eyebrow"><i class="bi bi-chat-square-quote"></i>Client Feedback</span>
-          <h2 class="city-page-section-title">Testimonials From Australian Clients</h2>
-        </div>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="city-page-testimonial">
-            <i class="bi bi-quote"></i>
-            <p>&ldquo;Web EASY Experts delivered a flawless service website for us. We saved over 60% compared to local quotes &ndash; and got better service.&rdquo;</p>
-            <div class="city-page-testimonial-author">
-              <div class="city-page-testimonial-avatar">
-                <img src="https://picsum.photos/seed/thiago-bernardez/100/100" alt="Thiago Bernardez">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="hero-visual position-relative">
+            <div class="hero-card">
+              <div class="hero-card-topbar">
+                <div class="dot dot-r"></div>
+                <div class="dot dot-y"></div>
+                <div class="dot dot-g"></div>
+                <div class="ms-2"
+                  style="font-size:0.72rem;color:var(--t500);background:var(--muted);padding:2px 12px;border-radius:20px;flex:1;max-width:200px;text-align:center">
+                  webesyexperts.com/dashboard</div>
               </div>
-              <div>
-                <strong>Thiago Bernardez</strong>
-                <small>Sydney, NSW</small>
+              <div class="hero-card-body">
+                <div class="row g-3 mb-3">
+                  <div class="col-4">
+                    <div class="mini-stat">
+                      <div class="lbl">Organic Traffic</div>
+                      <div class="val">38K</div>
+                      <div class="dlta up mt-1"><i class="bi bi-arrow-up-short"></i>42%</div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mini-stat">
+                      <div class="lbl">Leads Generated</div>
+                      <div class="val">284</div>
+                      <div class="dlta up mt-1"><i class="bi bi-arrow-up-short"></i>18%</div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mini-stat">
+                      <div class="lbl">Ad ROAS</div>
+                      <div class="val">5.2x</div>
+                      <div class="dlta up mt-1"><i class="bi bi-arrow-up-short"></i>0.8x</div>
+                    </div>
+                  </div>
+                </div>
+                <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden">
+                  <div
+                    style="padding:0.6rem 1rem;background:var(--subtle);font-size:0.72rem;font-weight:700;color:var(--t500);border-bottom:1px solid var(--border)">
+                    ACTIVE PROJECTS</div>
+                  <div
+                    style="padding:0.65rem 1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)">
+                    <div style="display:flex;align-items:center;gap:0.6rem"><i class="bi bi-check-circle-fill"
+                        style="color:#16A34A;font-size:0.85rem"></i><span
+                        style="font-size:0.82rem;font-weight:500;color:var(--t900)">RetailPlus — E-Commerce Store</span>
+                    </div>
+                    <span
+                      style="font-size:0.68rem;background:#DCFCE7;color:#15803D;padding:1px 8px;border-radius:20px;font-weight:600">Live</span>
+                  </div>
+                  <div
+                    style="padding:0.65rem 1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:rgba(229,57,53,0.025)">
+                    <div style="display:flex;align-items:center;gap:0.6rem"><i class="bi bi-circle"
+                        style="color:var(--red);font-size:0.85rem"></i><span
+                        style="font-size:0.82rem;font-weight:500;color:var(--t900)">MedCare Clinic — Website
+                        Redesign</span></div>
+                    <span
+                      style="font-size:0.68rem;background:#FEE2E2;color:#DC2626;padding:1px 8px;border-radius:20px;font-weight:600">In
+                      Progress</span>
+                  </div>
+                  <div style="padding:0.65rem 1rem;display:flex;justify-content:space-between;align-items:center">
+                    <div style="display:flex;align-items:center;gap:0.6rem"><i class="bi bi-circle"
+                        style="color:var(--t300);font-size:0.85rem"></i><span
+                        style="font-size:0.82rem;font-weight:500;color:var(--t900)">BuildRight Construction — SEO +
+                        Web</span></div>
+                    <span
+                      style="font-size:0.68rem;background:var(--muted);color:var(--t500);padding:1px 8px;border-radius:20px;font-weight:600">Design</span>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="floating-notif">
+              <div class="ndot"></div><i class="bi bi-graph-up-arrow text-danger"></i>Client site just hit Page 1 on
+              Google 🎉
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="city-page-testimonial">
-            <i class="bi bi-quote"></i>
-            <p>&ldquo;Great communication, top-notch design, and very affordable. Highly recommend to any Australian business!&rdquo;</p>
-            <div class="city-page-testimonial-author">
-              <div class="city-page-testimonial-avatar">
-                <img src="https://picsum.photos/seed/angus-fraser/100/100" alt="Angus Fraser">
+
+      </div>
+    </div>
+  </section>
+  <style>
+    :root {
+      --city-page-ink: #131316;
+      --city-page-red: #E31E2B;
+      --city-page-red-soft: rgba(227, 30, 43, .10);
+      --city-page-maroon: #7A0F16;
+      --city-page-tint: #FFF3F3;
+      --city-page-slate: #63636B;
+      --city-page-white: #FFFFFF;
+      --city-page-border: #EFE7E7;
+      --city-page-radius: 20px;
+      --city-page-radius-sm: 14px;
+    }
+
+    .city-page {
+      font-family: 'Inter', sans-serif;
+      color: var(--city-page-ink);
+      background: var(--city-page-white);
+      overflow-x: hidden;
+    }
+
+    .city-page h1,
+    .city-page h2,
+    .city-page h3,
+    .city-page h4 {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      color: var(--city-page-ink);
+    }
+
+    .city-page p {
+      color: var(--city-page-slate);
+      line-height: 1.75;
+    }
+
+    .city-page .city-page-section {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .city-page .city-page-section--alt {
+      background: var(--city-page-tint);
+    }
+
+    /* Decorative gradient blobs */
+    .city-page .city-page-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Badge / eyebrow */
+    .city-page .city-page-eyebrow {
+      font-family: 'Sora', sans-serif;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--city-page-red);
+      background: var(--city-page-tint);
+      border: 1px solid #FBD3D5;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .45rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+
+    .city-page .city-page-eyebrow i {
+      font-size: .95rem;
+    }
+
+    /* Section title with accent underline */
+    .city-page .city-page-section-title {
+      font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+      font-weight: 800;
+      margin-bottom: .9rem;
+      position: relative;
+    }
+
+    .city-page .city-page-section-lead {
+      max-width: 760px;
+    }
+
+    /* Buttons */
+    .city-page .city-page-btn {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .9rem 2.1rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      border: 1px solid transparent;
+    }
+
+    .city-page .city-page-btn--primary {
+      background: linear-gradient(135deg, #1a1a1a 0%, var(--city-page-maroon) 55%, var(--city-page-red) 130%);
+      color: var(--city-page-white);
+      box-shadow: 0 18px 34px -14px rgba(122, 15, 22, .55);
+    }
+
+    .city-page .city-page-btn--outline {
+      background: var(--city-page-white);
+      border-color: var(--city-page-border);
+      color: var(--city-page-ink);
+    }
+
+    /* ===== Hero ===== */
+    .city-page .city-page-hero {
+      padding: 6.5rem 0 5.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .city-page .city-page-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .city-page .city-page-hero h1 {
+      font-size: clamp(2.2rem, 4.2vw, 3.1rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+    }
+
+    .city-page .city-page-hero h1 .city-page-highlight {
+      background: linear-gradient(100deg, var(--city-page-red), var(--city-page-maroon));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .city-page .city-page-hero h2 {
+      color: var(--city-page-ink);
+      font-size: 1.15rem;
+      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      margin: 1rem 0 1.1rem;
+      opacity: .78;
+    }
+
+    .city-page .city-page-hero p {
+      color: var(--city-page-slate);
+      font-size: 1.03rem;
+      max-width: 46ch;
+    }
+
+    .city-page .city-page-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .9rem;
+      margin-top: 2rem;
+    }
+
+    /* Browser-chrome mockup */
+    .city-page .city-page-mockup {
+      position: relative;
+      z-index: 1;
+      background: var(--city-page-white);
+      border: 1px solid var(--city-page-border);
+      border-radius: var(--city-page-radius);
+      overflow: hidden;
+      box-shadow: 0 40px 80px -30px rgba(19, 19, 22, .28);
+    }
+
+    .city-page .city-page-mockup-bar {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .8rem 1rem;
+      border-bottom: 1px solid var(--city-page-border);
+      background: #FAFAFA;
+    }
+
+    .city-page .city-page-mockup-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #E2DEDE;
+    }
+
+    .city-page .city-page-mockup-url {
+      flex: 1;
+      height: 22px;
+      margin-left: .6rem;
+      background: var(--city-page-white);
+      border: 1px solid var(--city-page-border);
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--city-page-slate);
+      font-size: .7rem;
+    }
+
+    .city-page .city-page-mockup img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ===== Bento grid (Why choose us) ===== */
+    .city-page .city-page-bento {
+      position: relative;
+      z-index: 1;
+    }
+
+    .city-page .city-page-bento-card {
+      background: var(--city-page-white);
+      border: 1px solid var(--city-page-border);
+      border-radius: var(--city-page-radius-sm);
+      box-shadow: 0 14px 34px -22px rgba(19, 19, 22, .18);
+      padding: 1.7rem;
+      height: 100%;
+    }
+
+    .city-page .city-page-bento-card--feature {
+      background: linear-gradient(160deg, var(--city-page-white) 0%, var(--city-page-tint) 100%);
+      padding: 2.2rem;
+    }
+
+    .city-page .city-page-bento-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--city-page-red-soft) 0%, rgba(227, 30, 43, .03) 100%);
+      color: var(--city-page-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .city-page .city-page-bento-card--feature .city-page-bento-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      font-size: 1.5rem;
+    }
+
+    .city-page .city-page-bento-card h4 {
+      font-size: 1.05rem;
+      margin-bottom: .45rem;
+    }
+
+    .city-page .city-page-bento-card--feature h4 {
+      font-size: 1.3rem;
+    }
+
+    .city-page .city-page-bento-card p {
+      font-size: .92rem;
+      margin-bottom: 0;
+    }
+
+    /* ===== Process (route) ===== */
+    .city-page .city-page-process {
+      position: relative;
+    }
+
+    .city-page .city-page-process-track {
+      position: absolute;
+      top: 27px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-image: linear-gradient(to right, var(--city-page-border) 60%, transparent 0%);
+      background-size: 14px 2px;
+      background-repeat: repeat-x;
+      display: none;
+    }
+
+    @media (min-width:992px) {
+      .city-page .city-page-process-track {
+        display: block;
+      }
+    }
+
+    .city-page .city-page-process-step {
+      position: relative;
+      text-align: left;
+    }
+
+    .city-page .city-page-process-number {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #1a1a1a 0%, var(--city-page-maroon) 100%);
+      color: var(--city-page-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.15rem;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 14px 26px -12px rgba(122, 15, 22, .45);
+    }
+
+    .city-page .city-page-process-step h4 {
+      font-size: 1.03rem;
+      margin-bottom: .5rem;
+    }
+
+    .city-page .city-page-process-step p {
+      font-size: .92rem;
+    }
+
+    /* ===== Cities grid ===== */
+    .city-page .city-page-city-chip {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      background: var(--city-page-white);
+      border: 1px solid var(--city-page-border);
+      border-radius: var(--city-page-radius-sm);
+      box-shadow: 0 10px 24px -18px rgba(19, 19, 22, .18);
+      padding: 1rem 1.1rem;
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--city-page-ink);
+      height: 100%;
+    }
+
+    .city-page .city-page-city-chip .city-page-city-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--city-page-red-soft);
+      color: var(--city-page-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    /* ===== Tasmania spotlight ===== */
+    .city-page .city-page-spotlight {
+      background: linear-gradient(135deg, #17171b 0%, var(--city-page-maroon) 140%);
+      color: var(--city-page-white);
+      border-radius: var(--city-page-radius);
+      padding: 3.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .city-page .city-page-spotlight h2 {
+      color: var(--city-page-white);
+    }
+
+    .city-page .city-page-spotlight p {
+      color: rgba(255, 255, 255, .78);
+    }
+
+    .city-page .city-page-spotlight ul {
+      list-style: none;
+      padding: 0;
+      margin: 1.6rem 0;
+    }
+
+    .city-page .city-page-spotlight ul li {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      padding: .65rem 0;
+      color: rgba(255, 255, 255, .92);
+      font-size: .96rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .city-page .city-page-spotlight ul li:last-child {
+      border-bottom: none;
+    }
+
+    .city-page .city-page-spotlight ul li .city-page-spotlight-check {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .12);
+      color: var(--city-page-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      flex: 0 0 auto;
+    }
+
+    /* ===== Features grid ===== */
+    .city-page .city-page-feature-card {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      background: var(--city-page-white);
+      border: 1px solid var(--city-page-border);
+      border-radius: var(--city-page-radius-sm);
+      box-shadow: 0 10px 24px -18px rgba(19, 19, 22, .16);
+      padding: .95rem 1.1rem;
+      height: 100%;
+    }
+
+    .city-page .city-page-feature-card i {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      flex: 0 0 auto;
+      background: var(--city-page-red-soft);
+      color: var(--city-page-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .95rem;
+    }
+
+    .city-page .city-page-feature-card span {
+      font-size: .9rem;
+      color: var(--city-page-ink);
+      font-weight: 500;
+    }
+
+    /* ===== Tech stack ===== */
+    .city-page .city-page-tech-card {
+      background: var(--city-page-white);
+      border: 1px solid var(--city-page-border);
+      border-radius: var(--city-page-radius-sm);
+      box-shadow: 0 12px 28px -20px rgba(19, 19, 22, .18);
+      padding: 1.5rem 1.1rem;
+      text-align: center;
+      height: 100%;
+    }
+
+    .city-page .city-page-tech-card i {
+      font-size: 1.35rem;
+      color: var(--city-page-red);
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--city-page-red-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto .8rem;
+    }
+
+    .city-page .city-page-tech-card span {
+      font-family: 'Sora', sans-serif;
+      font-weight: 600;
+      font-size: .88rem;
+      color: var(--city-page-ink);
+    }
+
+    /* ===== Industries ===== */
+    .city-page .city-page-industry-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--city-page-white);
+      border: 1px solid var(--city-page-border);
+      border-radius: 999px;
+      padding: .6rem 1.15rem;
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--city-page-ink);
+    }
+
+    .city-page .city-page-industry-pill i {
+      color: var(--city-page-red);
+    }
+
+    /* ===== Testimonials ===== */
+    .city-page .city-page-testimonial {
+      background: var(--city-page-white);
+      border: 1px solid var(--city-page-border);
+      border-radius: var(--city-page-radius);
+      box-shadow: 0 20px 40px -26px rgba(19, 19, 22, .2);
+      padding: 2.2rem;
+      height: 100%;
+      position: relative;
+    }
+
+    .city-page .city-page-testimonial i.bi-quote {
+      font-size: 1.4rem;
+      color: var(--city-page-maroon);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--city-page-tint);
+      margin-bottom: 1.2rem;
+    }
+
+    .city-page .city-page-testimonial p {
+      color: var(--city-page-ink);
+      font-size: 1.02rem;
+      font-style: italic;
+    }
+
+    .city-page .city-page-testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      margin-top: 1.4rem;
+    }
+
+    .city-page .city-page-testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .city-page .city-page-testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .city-page .city-page-testimonial-author strong {
+      display: block;
+      font-size: .92rem;
+      color: var(--city-page-ink);
+    }
+
+    .city-page .city-page-testimonial-author small {
+      color: var(--city-page-slate);
+    }
+
+    /* ===== Guarantee ===== */
+    .city-page .city-page-guarantee {
+      background: var(--city-page-white);
+      border-radius: var(--city-page-radius);
+      padding: 3.2rem;
+      border: 1px solid var(--city-page-border);
+      box-shadow: 0 20px 50px -30px rgba(19, 19, 22, .2);
+    }
+
+    .city-page .city-page-guarantee-icon {
+      width: 66px;
+      height: 66px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #1a1a1a 0%, var(--city-page-maroon) 100%);
+      color: var(--city-page-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      margin-bottom: 1.3rem;
+      box-shadow: 0 16px 30px -14px rgba(122, 15, 22, .5);
+    }
+
+    /* ===== Final CTA ===== */
+    .city-page .city-page-cta {
+      background: linear-gradient(135deg, #17171b 0%, var(--city-page-maroon) 55%, var(--city-page-red) 140%);
+      color: var(--city-page-white);
+      border-radius: var(--city-page-radius);
+      padding: 3.8rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .city-page .city-page-cta h2 {
+      color: var(--city-page-white);
+    }
+
+    .city-page .city-page-cta p {
+      color: rgba(255, 255, 255, .85);
+    }
+
+    .city-page .city-page-cta-content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <!-- ================= YOUR EXISTING HEADER GOES HERE ================= -->
+
+    <main class="city-page">
+
+      <!-- Hero Section -->
+      <section class="city-page-hero">
+        <div class="city-page-blob"
+          style="width:420px;height:420px;top:-120px;right:-80px;background:radial-gradient(circle,rgba(227,30,43,.20),transparent 70%);">
+        </div>
+        <div class="city-page-blob"
+          style="width:320px;height:320px;bottom:-100px;right:20%;background:radial-gradient(circle,rgba(122,15,22,.14),transparent 70%);">
+        </div>
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 city-page-hero-content">
+              <span class="city-page-eyebrow"><i class="bi bi-geo-alt"></i>Australia Wide Web Design</span>
+              <h1>Build a Website That <span class="city-page-highlight">Turns Visitors into Customers</span></h1>
+              <h2>Hire Skilled Indian Websites Developers &amp; Designers for Your Australian Business</h2>
+              <p>Web EASY Experts&rsquo; skilled team of designers and developers from India is a one-step choice for
+                building lead generating website for the Australian business owners at competitive prices to small or
+                medium-sized businesses.</p>
+              <div class="city-page-hero-actions">
+                <a href="#" class="city-page-btn city-page-btn--primary"><i class="bi bi-send-check"></i>Get a Free
+                  Quote</a>
               </div>
-              <div>
-                <strong>Angus Fraser</strong>
-                <small>Melbourne</small>
+            </div>
+            <div class="col-lg-6">
+              <div class="city-page-mockup">
+                <div class="city-page-mockup-bar">
+                  <span class="city-page-mockup-dot"></span>
+                  <span class="city-page-mockup-dot"></span>
+                  <span class="city-page-mockup-dot"></span>
+                  <div class="city-page-mockup-url"><i class="bi bi-lock-fill"></i></div>
+                </div>
+                <img src="https://picsum.photos/seed/webeasy-hero/800/600"
+                  alt="Website design and development for Australian businesses">
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Guarantee -->
-  <section class="city-page-section city-page-section--alt">
-    <div class="container">
-      <div class="city-page-guarantee">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-8">
-            <div class="city-page-guarantee-icon"><i class="bi bi-shield-check"></i></div>
-            <h2 class="city-page-section-title">Get a Website with No Risk to You &mdash; 100% Satisfaction Guarantee</h2>
-            <p>We&rsquo;re confident you&rsquo;ll love your new website &mdash; and we back it with a 100% satisfaction guarantee.</p>
-            <p>At Web EASY Experts, we don&rsquo;t just aim to meet your expectations &mdash; we&rsquo;re committed to exceeding them. If you're not happy with the initial design or direction, we&rsquo;ll revise it until you&rsquo;re completely satisfied, at no extra cost.</p>
-            <p class="mb-0">No upfront risk. No hidden charges. Just a professionally built website that works for your business.</p>
+      <!-- Intro -->
+      <section class="city-page-section">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-9">
+              <span class="city-page-eyebrow"><i class="bi bi-award"></i>Why Web EASY Experts</span>
+              <h2 class="city-page-section-title">Need Cost effective Website Design &amp; Development Services in
+                Australia</h2>
+              <p>If you are a business owner and want a cost-effective website to promote your offline business in your
+                local city or across Australia, Web EASY Experts is your one-step solution. We have more than 10 years
+                of experienced website designers and developers on our team for delivering world-class websites at
+                highly competitive prices, typically costing between 500 and 15,000+ AUD, depending on the complexity,
+                to businesses all across Australia.</p>
+              <p>We use the latest website development technologies, modern programming languages, and industry best
+                practices to build fast, secure, scalable, and SEO-friendly websites. Our experienced website developers
+                and designers in India provide regular website updates, security patches, performance optimisation, and
+                ongoing technical support, ensuring all our Australian clients websites remain reliable, up-to-date, and
+                ready to help your business grow.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Final CTA -->
-  <section class="city-page-section">
+      <!-- Why Businesses Trust Us — bento grid -->
+      <section class="city-page-section city-page-section--alt">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-8">
+              <span class="city-page-eyebrow"><i class="bi bi-shield-check"></i>Our Advantage</span>
+              <h2 class="city-page-section-title">Why Businesses Across Australia Trust Web EASY Experts For Web Design
+                &amp; Development</h2>
+              <p>Choosing Web EASY Experts means choosing:</p>
+            </div>
+          </div>
+          <div class="row g-4 city-page-bento">
+            <div class="col-lg-6">
+              <div class="city-page-bento-card city-page-bento-card--feature">
+                <div class="city-page-bento-icon"><i class="bi bi-compass"></i></div>
+                <h4>Australian-Focused Strategy</h4>
+                <p>Our strategy is based on your audience and building website that can attract, connect with and
+                  convert your target customers from Australia.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="city-page-bento-card">
+                <div class="city-page-bento-icon"><i class="bi bi-people"></i></div>
+                <h4>Platform-Specific Teams</h4>
+                <p>Are you looking for developers with expertise in a specific platform? We have dedicated specialists
+                  for WordPress, Shopify, Laravel, ReactJS, and custom PHP.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="city-page-bento-card">
+                <div class="city-page-bento-icon"><i class="bi bi-piggy-bank"></i></div>
+                <h4>Affordable Development</h4>
+                <p>With our team based in India, you can reduce huge cost of website development while still maintaining
+                  quality.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="city-page-bento-card">
+                <div class="city-page-bento-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <h4>Result-Driven Approach</h4>
+                <p>We always use clever design and quality development along with SEO tactics in each of our websites to
+                  ensure that customer&rsquo;s business needs are met.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="city-page-bento-card">
+                <div class="city-page-bento-icon"><i class="bi bi-chat-dots"></i></div>
+                <h4>Transparent Communication</h4>
+                <p>From project kickoff to launch, you&rsquo;ll receive regular updates, clear milestones, and
+                  responsive communication.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="city-page-bento-card">
+                <div class="city-page-bento-icon"><i class="bi bi-tools"></i></div>
+                <h4>Nominal Maintenance Cost</h4>
+                <p>We build website for the long-term performance with minimal maintenance and easy future updates.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="city-page-bento-card">
+                <div class="city-page-bento-icon"><i class="bi bi-patch-check"></i></div>
+                <h4>No Cost For Minor Changes</h4>
+                <p>We handle small tweaks and adjustments at no extra charge it helps your website continues to meet
+                  your expectations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="city-page-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-8">
+              <span class="city-page-eyebrow"><i class="bi bi-signpost-2"></i>How We Work</span>
+              <h2 class="city-page-section-title">Our Web Design &amp; Development Services Process</h2>
+              <p>We follow research and development process to ensure smooth project execution and outstanding results:
+              </p>
+            </div>
+          </div>
+          <div class="city-page-process">
+            <div class="city-page-process-track"></div>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg">
+                <div class="city-page-process-step">
+                  <div class="city-page-process-number">1</div>
+                  <h4>Discovery &amp; Consultation</h4>
+                  <p>We discuss the aspirations, the kind of business that you have the competitors in the market as
+                    well as your target audience in Australia.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg">
+                <div class="city-page-process-step">
+                  <div class="city-page-process-number">2</div>
+                  <h4>Wireframing &amp; Design Concepts</h4>
+                  <p>Our purpose of website of designers is to produce layouts and wireframes in accordance with
+                    Australian UX best practices as well as the aspect of mobile friendliness.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg">
+                <div class="city-page-process-step">
+                  <div class="city-page-process-number">3</div>
+                  <h4>Development Phase</h4>
+                  <p>Our skilled developers write your website in a clean code and integrate it with CMS or e-Commerce
+                    platforms where necessary.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg">
+                <div class="city-page-process-step">
+                  <div class="city-page-process-number">4</div>
+                  <h4>Quality Testing &amp; Optimization</h4>
+                  <p>Before launching the website, we make tests across the devices and browsers and take care of the
+                    speed and other things involved.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg">
+                <div class="city-page-process-step">
+                  <div class="city-page-process-number">5</div>
+                  <h4>Launch &amp; Ongoing Support</h4>
+                  <p>We launch your website after getting the approval and continue our assistance as long as your
+                    company grows.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cities we serve -->
+      <section class="city-page-section city-page-section--alt">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-8">
+              <span class="city-page-eyebrow"><i class="bi bi-map"></i>Where We Work</span>
+              <h2 class="city-page-section-title">Our Top Level Web Design Services in Australia &ndash; Built for
+                Impact</h2>
+              <p>We serve all States &amp;Territories major cities including:</p>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Sydney</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Melbourne</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Brisbane</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Perth</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Adelaide</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Canberra</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Gold Coast</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Sunshine Coast</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Darwin</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-city-chip"><span class="city-page-city-dot"><i
+                    class="bi bi-geo-alt-fill"></i></span>Alice Springs</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tasmania spotlight -->
+      <section class="city-page-section">
+        <div class="container">
+          <div class="city-page-spotlight">
+            <div class="city-page-blob"
+              style="width:300px;height:300px;top:-80px;right:-60px;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 70%);">
+            </div>
+            <div class="row align-items-center g-5" style="position:relative;z-index:1;">
+              <div class="col-lg-7">
+                <span class="city-page-eyebrow"
+                  style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff;"><i
+                    class="bi bi-pin-map"></i>Local Spotlight</span>
+                <h2>Tasmania &ndash; We Serve Local Businesses Too</h2>
+                <p>At Web EASY Experts, we&rsquo;re proud to support businesses not just in mainland cities, but also in
+                  Tasmania &mdash; including Hobart, Launceston, Devonport, and nearby towns.</p>
+                <p>Whether you&rsquo;re a tourism operator, caf&eacute; owner, tradesperson, or creative agency in
+                  Tasmania, we deliver affordable, professionally built websites tailored to your local audience and
+                  business goals.</p>
+                <ul>
+                  <li><span class="city-page-spotlight-check"><i class="bi bi-check-lg"></i></span>Local search
+                    optimized sites in Tasmania</li>
+                  <li><span class="city-page-spotlight-check"><i class="bi bi-check-lg"></i></span>Industry-specific web
+                    designs in retail, tourism, and trades</li>
+                  <li><span class="city-page-spotlight-check"><i class="bi bi-check-lg"></i></span>Rapid project
+                    completion with immediate assistance</li>
+                  <li><span class="city-page-spotlight-check"><i class="bi bi-check-lg"></i></span>Budget-friendly
+                    website services for emerging businesses</li>
+                </ul>
+                <p class="mb-0">You don&rsquo;t need a big-city budget to get a high-performing website. Web EASY
+                  Experts brings agency-quality design to businesses across Tasmania.</p>
+              </div>
+              <div class="col-lg-5">
+                <div class="city-page-mockup" style="border-color:rgba(255,255,255,.15);">
+                  <img src="https://picsum.photos/seed/tasmania-webeasy/700/560" alt="Local businesses in Tasmania">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="city-page-section city-page-section--alt">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-8">
+              <span class="city-page-eyebrow"><i class="bi bi-stars"></i>What You Get</span>
+              <h2 class="city-page-section-title">Professional Website Features for Australian Businesses</h2>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Mobile Responsive Design</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Clean &amp; Modern UI/UX</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Fast Load Speed</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>SEO-Friendly Structure</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Easy Content Management System
+                  (CMS)</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Secure Website with SSL
+                  Integration</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Cross-Browser Compatibility</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Google Analytics &amp; Search
+                  Console Integration</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Conversion-Focused Layout</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>User-Friendly Navigation</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Contact Form &amp; Lead Generation
+                  Features</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Optimised Images &amp;
+                  Performance</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Social Media Integration</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Google Maps Integration</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Spam-Protected Contact Forms</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Schema Markup Implementation</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Easy Future Updates &amp;
+                  Scalability</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Custom Call-to-Action
+                  Sections</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="city-page-feature-card"><i class="bi bi-check2"></i><span>Blog &amp; News Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech stack -->
+      <section class="city-page-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-9">
+              <span class="city-page-eyebrow"><i class="bi bi-cpu"></i>Technology</span>
+              <h2 class="city-page-section-title">Searching for Website Designers &amp; Developers with Modern
+                Technology Expertise in Australia &ndash; Powered by India&rsquo;s Top Talent</h2>
+              <p>At Web EASY Experts you will get the same quality and creativity you&rsquo;d expect from your website
+                design and developments company in Australia. Whatever you required static sites to large-scale web
+                applications, we deliver high-performance websites that support business growth without the inflated
+                cost. Our remote team works on your schedule, offers regular consultations, and delivers on time.</p>
+              <p>Our developers are fluent in:</p>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="city-page-tech-card"><i class="bi bi-code-slash"></i><span>HTML5, CSS3, JS</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="city-page-tech-card"><i class="bi bi-wordpress"></i><span>WordPress, WooCommerce</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="city-page-tech-card"><i class="bi bi-shop"></i><span>Shopify, Magento, Wix</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="city-page-tech-card"><i class="bi bi-diagram-3"></i><span>ReactJS, Angular, Node.js</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="city-page-tech-card"><i class="bi bi-server"></i><span>PHP, Laravel, MySQL</span></div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="city-page-tech-card"><i class="bi bi-plug"></i><span>API Integrations &amp; More</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Industries -->
+      <section class="city-page-section city-page-section--alt">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-8">
+              <span class="city-page-eyebrow"><i class="bi bi-briefcase"></i>Who We Work With</span>
+              <h2 class="city-page-section-title">Trusted by Large and Small Businesses in Australia</h2>
+              <p>We proudly serve startups, SMEs, and enterprises across industries:</p>
+              <p class="fw-semibold mb-3" style="color: var(--city-page-ink);">Industries We Serve:</p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mb-5">
+            <span class="city-page-industry-pill"><i class="bi bi-bag"></i>Retail &amp; eCommerce</span>
+            <span class="city-page-industry-pill"><i class="bi bi-heart-pulse"></i>Health &amp; Fitness</span>
+            <span class="city-page-industry-pill"><i class="bi bi-house-door"></i>Real Estate</span>
+            <span class="city-page-industry-pill"><i class="bi bi-cone-striped"></i>Construction &amp; Trades</span>
+            <span class="city-page-industry-pill"><i class="bi bi-cash-coin"></i>Finance &amp; Consulting</span>
+            <span class="city-page-industry-pill"><i class="bi bi-cup-hot"></i>Hospitality &amp; Events</span>
+            <span class="city-page-industry-pill"><i class="bi bi-mortarboard"></i>Education &amp; Coaching</span>
+          </div>
+          <div class="row">
+            <div class="col-lg-9">
+              <p>From one-man operations to large enterprises, our experienced website designers and developers combine
+                creativity and technical expertise to deliver outstanding digital solutions.</p>
+              <p class="mb-0">No matter your business size or sector, we bring premium design and tech to your
+                fingertips &mdash; cost-effectively.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="city-page-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-8">
+              <span class="city-page-eyebrow"><i class="bi bi-chat-square-quote"></i>Client Feedback</span>
+              <h2 class="city-page-section-title">Testimonials From Australian Clients</h2>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="city-page-testimonial">
+                <i class="bi bi-quote"></i>
+                <p>&ldquo;Web EASY Experts delivered a flawless service website for us. We saved over 60% compared to
+                  local quotes &ndash; and got better service.&rdquo;</p>
+                <div class="city-page-testimonial-author">
+                  <div class="city-page-testimonial-avatar">
+                    <img src="https://picsum.photos/seed/thiago-bernardez/100/100" alt="Thiago Bernardez">
+                  </div>
+                  <div>
+                    <strong>Thiago Bernardez</strong>
+                    <small>Sydney, NSW</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="city-page-testimonial">
+                <i class="bi bi-quote"></i>
+                <p>&ldquo;Great communication, top-notch design, and very affordable. Highly recommend to any Australian
+                  business!&rdquo;</p>
+                <div class="city-page-testimonial-author">
+                  <div class="city-page-testimonial-avatar">
+                    <img src="https://picsum.photos/seed/angus-fraser/100/100" alt="Angus Fraser">
+                  </div>
+                  <div>
+                    <strong>Angus Fraser</strong>
+                    <small>Melbourne</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Guarantee -->
+      <section class="city-page-section city-page-section--alt">
+        <div class="container">
+          <div class="city-page-guarantee">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-8">
+                <div class="city-page-guarantee-icon"><i class="bi bi-shield-check"></i></div>
+                <h2 class="city-page-section-title">Get a Website with No Risk to You &mdash; 100% Satisfaction
+                  Guarantee</h2>
+                <p>We&rsquo;re confident you&rsquo;ll love your new website &mdash; and we back it with a 100%
+                  satisfaction guarantee.</p>
+                <p>At Web EASY Experts, we don&rsquo;t just aim to meet your expectations &mdash; we&rsquo;re committed
+                  to exceeding them. If you're not happy with the initial design or direction, we&rsquo;ll revise it
+                  until you&rsquo;re completely satisfied, at no extra cost.</p>
+                <p class="mb-0">No upfront risk. No hidden charges. Just a professionally built website that works for
+                  your business.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="city-page-section">
+        <div class="container">
+          <div class="city-page-cta">
+            <div class="city-page-blob"
+              style="width:280px;height:280px;top:-60px;left:-60px;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%);">
+            </div>
+            <div class="city-page-cta-content">
+              <h2>Get Started in The Smart Way with Web EASY Experts Today</h2>
+              <p>Want to grow your business online with a stunning, high-performance website?</p>
+              <p>Let&rsquo;s talk with Web EASY Experts, we are India based Australian business owner&rsquo;s trusted
+                website designers and developers team deliver top-notch website design and development services at
+                affordable cost.</p>
+              <a href="#" class="city-page-btn city-page-btn--outline mt-2"><i class="bi bi-calendar-check"></i>Schedule
+                a Free Consultation Today!</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+ <!-- ══════ FOOTER — Callback strip + multi-column dark footer ══════ -->
+  <!-- Video Lightbox (global — used by mega menu video cards) -->
+  <div class="mega-lightbox" id="megaLightbox">
+    <div class="mega-lightbox-inner">
+      <button class="mega-lightbox-close" onclick="closeMegaVideo()"><i class="bi bi-x-lg"></i></button>
+      <iframe id="megaLightboxFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- ══════ REQUEST CALLBACK STRIP ══════ -->
+  <div class="callback-strip">
     <div class="container">
-      <div class="city-page-cta">
-        <div class="city-page-blob" style="width:280px;height:280px;top:-60px;left:-60px;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 70%);"></div>
-        <div class="city-page-cta-content">
-          <h2>Get Started in The Smart Way with Web EASY Experts Today</h2>
-          <p>Want to grow your business online with a stunning, high-performance website?</p>
-          <p>Let&rsquo;s talk with Web EASY Experts, we are India based Australian business owner&rsquo;s trusted website designers and developers team deliver top-notch website design and development services at affordable cost.</p>
-          <a href="#" class="city-page-btn city-page-btn--outline mt-2"><i class="bi bi-calendar-check"></i>Schedule a Free Consultation Today!</a>
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5" data-aos="fade-right-off">
+          <div class="callback-strip-label">Request a Callback</div>
+          <h4>Get a free call from our web experts</h4>
+          <p>Leave your number — we'll call you back within 2 hours during business hours.</p>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left-off">
+          <div class="callback-form">
+            <input type="text" class="callback-input" placeholder="Your Name" />
+            <input type="tel" class="callback-input" placeholder="Phone / WhatsApp" />
+            <select class="callback-input fc-select"
+              style="color:#475569;background-image:url('data:image/svg+xml,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3e%3cpath fill=%2264748b%22 d=%22M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z%22/%3e%3c/svg%3e');background-repeat:no-repeat;background-position:right 0.85rem center;background-size:12px;padding-right:2.5rem">
+              <option value="">Service needed...</option>
+              <option>Website Design</option>
+              <option>eCommerce Store</option>
+              <option>SEO Services</option>
+              <option>Google / Meta Ads</option>
+              <option>Logo & Branding</option>
+            </select>
+            <button class="callback-btn"><i class="bi bi-telephone-fill me-2"></i>Request Callback</button>
+          </div>
+          <p style="font-size:0.72rem;color:#c4cad3;margin-top:0.6rem;margin-bottom:0"><i
+              class="bi bi-lock-fill me-1"></i> Your details are 100% private. No spam, ever.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+  <!-- ===================================================================================== -->
+  <!-- Main footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Brand col -->
+        <div class="col-lg-3 col-md-6">
+          <!-- <div class="footer-brand">
+            <div class="brand-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>Web EASY Experts
+          </div> -->
+          <div class="footer-logo p-2">
+            <!-- <img src="assets/logo-light.png" alt="Web EASY Experts Logo" class="footer-logo-light" /> -->
+            <img src="assets/images/footer-logo.png" alt="Web EASY Experts Logo " class="footer-logo-dark"
+              style="width: 80%;" />
+          </div>
+          <div class="footer-tagline">A team of expert website designers and developers from India, helping businesses
+            worldwide build strong, future-ready online presences.</div>
+          <div class="d-flex gap-2 mb-3">
+            <a href="https://www.instagram.com/webeasyexperts/" target="_blank" class="social-icon">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/web-easy-experts/" target="_blank" class="social-icon">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/WebEASYExperts" target="_blank" class="social-icon">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://x.com/webeasyexperts" target="_blank" class="social-icon">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="https://in.pinterest.com/webeasyexperts/" target="_blank" class="social-icon">
+              <i class="bi bi-pinterest"></i>
+            </a>
+          </div>
+          <!-- Contact info -->
+          <div class="footer-contact-item"><i class="bi bi-whatsapp"></i><span>+91 94321 20437</span></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span><a
+                href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                data-cfemail="cdbaa8afa8acbeb4a8b5bda8bfb9be8daaa0aca4a1e3aea2a0">[email&#160;protected]</a></span>
+          </div>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span> Kolkata, India</span>
+          </div>
+        </div>
 
-</main>
+        <!-- Services col -->
+        <div class="col-lg-2 col-6">
+          <div class="footer-heading">Services</div>
+          <a href="#services" class="footer-link">Website Design</a>
+          <a href="#services" class="footer-link">eCommerce Dev</a>
+          <a href="#services" class="footer-link">Custom Development</a>
+          <a href="#services" class="footer-link">SEO Optimisation</a>
+          <a href="#services" class="footer-link">Performance Ads</a>
+          <a href="#services" class="footer-link">Social Media</a>
+          <a href="#services" class="footer-link">Logo & Branding</a>
+          <a href="#services" class="footer-link">Website Maintenance</a>
+        </div>
 
-<!-- ================= YOUR EXISTING FOOTER GOES HERE ================= -->
+        <!-- Industries col -->
+        <div class="col-lg-2 col-6">
+          <div class="footer-heading">Industries</div>
+          <a href="#" class="footer-link">Real Estate</a>
+          <a href="#" class="footer-link">Healthcare</a>
+          <a href="#" class="footer-link">Education</a>
+          <a href="#" class="footer-link">Fashion & Retail</a>
+          <a href="#" class="footer-link">SaaS & Startups</a>
+          <a href="#" class="footer-link">Logistics</a>
+          <a href="#" class="footer-link">Finance & NBFC</a>
+          <a href="#" class="footer-link">Jewellery</a>
+        </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+        <!-- Company col -->
+        <div class="col-lg-2 col-6">
+          <div class="footer-heading">Company</div>
+          <a href="#" class="footer-link">About Us</a>
+          <a href="#portfolio" class="footer-link">Portfolio</a>
+          <a href="#blog" class="footer-link">Blog</a>
+          <a href="#" class="footer-link">Case Studies</a>
+          <a href="#" class="footer-link">Careers</a>
+          <a href="#" class="footer-link">Press Kit</a>
+          <a href="#contact" class="footer-link">Contact Us</a>
+        </div>
+
+        <!-- We serve + legal col -->
+        <div class="col-lg-3 col-6">
+          <div class="footer-heading">We Serve</div>
+          <a href="#" class="footer-link">🇦🇺 Australia</a>
+          <a href="#" class="footer-link">🇺🇸 United States</a>
+          <a href="#" class="footer-link">🇬🇧 United Kingdom</a>
+          <a href="#" class="footer-link">🇦🇪 UAE & Middle East</a>
+          <a href="#" class="footer-link">🇨🇦 Canada</a>
+          <a href="#" class="footer-link">🌍 Worldwide</a>
+          <div class="footer-heading mt-4">Legal</div>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Cookie Policy</a>
+          <a href="#faq" class="footer-link">FAQ</a>
+        </div>
+      </div>
+
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <span>© 2026 Web EASY Experts. All rights reserved.</span>
+        <span style="display:flex;align-items:center;gap:0.5rem">
+          <i class="bi bi-patch-check-fill text-success"></i>
+          Powered by India's top talent 🇮🇳 &nbsp;·&nbsp; Serving the world 🌍
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/919432120437" class="wa-float" target="_blank" title="Chat on WhatsApp"><i
+      class="bi bi-whatsapp"></i></a>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" title="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- ══════ SCRIPTS ══════ -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/footer.js"></script>
 </body>
+
 </html>
