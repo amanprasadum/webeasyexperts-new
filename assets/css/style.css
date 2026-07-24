@@ -1058,7 +1058,8 @@ a {
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   font-family: var(--display);
-  font-size: 0.875rem;
+  /* font-size: 0.875rem; */
+  font-size: 12px;
   font-weight: 600;
   color: var(--t700);
   transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
