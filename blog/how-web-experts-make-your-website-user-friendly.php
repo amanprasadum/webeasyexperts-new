@@ -20,6 +20,7 @@
 
 <body>
 
+
   <?php $base = "../"; $home = "../index.php"; include $base . "header.php"; ?><!-- ══════ BLOG LAYOUT ══════ -->
   <section class="wbeasy-blog-pg-layout">
     <div class="container">
