@@ -55,11 +55,11 @@ $wbeasy_blog_posts = [
                   <input type="hidden" name="access_key" value="15c4b0e4-e0e7-47ca-91c6-e88f83db9a74">
                   <input type="hidden" name="subject" value="New Contact Form Submission - Blog Sidebar">
                   <input type="text" name="name" placeholder="Your Name" required
-                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.6rem;border:1px solid var(--border);border-radius:8px;font-size:0.85rem;font-family:inherit;">
+                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.6rem;border:1px solid var(--border); font-size:0.85rem;font-family:inherit;">
                   <input type="email" name="email" placeholder="Your Email" required
-                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.6rem;border:1px solid var(--border);border-radius:8px;font-size:0.85rem;font-family:inherit;">
+                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.6rem;border:1px solid var(--border); font-size:0.85rem;font-family:inherit;">
                   <textarea name="message" placeholder="Your Message" rows="3" required
-                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.75rem;border:1px solid var(--border);border-radius:8px;font-size:0.85rem;font-family:inherit;resize:vertical;"></textarea>
+                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.75rem;border:1px solid var(--border); font-size:0.85rem;font-family:inherit;resize:vertical;"></textarea>
                   <button type="submit" class="wbeasy-blog-pg-cta-widget-btn" style="width:100%;justify-content:center;border:none;cursor:pointer;">
                     <i class="bi bi-send-fill me-1"></i> Send Message</button>
                 </form>
