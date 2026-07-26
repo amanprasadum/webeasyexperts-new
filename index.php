@@ -2172,30 +2172,32 @@
         </div>
 
         <!-- Right form -->
-        <div class="wexpert-contact-form-wrap" data-aos="fade-left-off">
+        <form class="wexpert-contact-form-wrap w3-form" data-aos="fade-left-off">
+          <input type="hidden" name="access_key" value="15c4b0e4-e0e7-47ca-91c6-e88f83db9a74">
+          <input type="hidden" name="subject" value="New Contact Form Submission - Homepage">
 
           <div class="wexpert-contact-row">
             <div class="wexpert-contact-field">
               <label class="wexpert-contact-label">Your Name <span>*</span></label>
-              <input type="text" class="wexpert-contact-input" placeholder="John Smith" required />
+              <input type="text" class="wexpert-contact-input" name="name" placeholder="John Smith" required />
             </div>
             <div class="wexpert-contact-field">
               <label class="wexpert-contact-label">Phone / WhatsApp <span>*</span></label>
-              <input type="tel" class="wexpert-contact-input" placeholder="+1 234 567 8900" required />
+              <input type="tel" class="wexpert-contact-input" name="phone" placeholder="+1 234 567 8900" required />
             </div>
           </div>
 
           <div class="wexpert-contact-field">
             <label class="wexpert-contact-label">Email Address <span>*</span></label>
-            <input type="email" class="wexpert-contact-input" placeholder="john@yourcompany.com" required />
+            <input type="email" class="wexpert-contact-input" name="email" placeholder="john@yourcompany.com" required />
           </div>
 
           <div class="wexpert-contact-field">
             <label class="wexpert-contact-label">Message <span>*</span></label>
-            <textarea class="wexpert-contact-input" placeholder="Tell us about your project..." required></textarea>
+            <textarea class="wexpert-contact-input" name="message" placeholder="Tell us about your project..." required></textarea>
           </div>
 
-          <button class="wexpert-contact-btn">
+          <button type="submit" class="wexpert-contact-btn">
             Send Message <i class="bi bi-arrow-right"></i>
           </button>
 
@@ -2204,7 +2206,7 @@
             We respond within 2 hours on business days. No spam, ever.
           </p>
 
-        </div>
+        </form>
       </div>
     </div>
   </section>

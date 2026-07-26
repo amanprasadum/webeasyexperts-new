@@ -48,6 +48,28 @@ $wbeasy_blog_posts = [
                     class="bi bi-arrow-right-circle-fill me-1"></i> Claim Free Audit</a>
               </div>
 
+              <!-- Quick contact form widget -->
+              <div class="wbeasy-blog-pg-cta-widget" style="text-align:left;">
+                <div class="wbeasy-blog-pg-cta-widget-title" style="margin-bottom:0.85rem;">Quick <span>Contact</span></div>
+                <form class="w3-form" data-success-id="blog-sidebar-form-success">
+                  <input type="hidden" name="access_key" value="15c4b0e4-e0e7-47ca-91c6-e88f83db9a74">
+                  <input type="hidden" name="subject" value="New Contact Form Submission - Blog Sidebar">
+                  <input type="text" name="name" placeholder="Your Name" required
+                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.6rem;border:1px solid var(--border);border-radius:8px;font-size:0.85rem;font-family:inherit;">
+                  <input type="email" name="email" placeholder="Your Email" required
+                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.6rem;border:1px solid var(--border);border-radius:8px;font-size:0.85rem;font-family:inherit;">
+                  <textarea name="message" placeholder="Your Message" rows="3" required
+                    style="width:100%;padding:0.65rem 0.85rem;margin-bottom:0.75rem;border:1px solid var(--border);border-radius:8px;font-size:0.85rem;font-family:inherit;resize:vertical;"></textarea>
+                  <button type="submit" class="wbeasy-blog-pg-cta-widget-btn" style="width:100%;justify-content:center;border:none;cursor:pointer;">
+                    <i class="bi bi-send-fill me-1"></i> Send Message</button>
+                </form>
+                <div id="blog-sidebar-form-success" style="display:none;text-align:center;padding:0.5rem 0;">
+                  <i class="bi bi-check-circle-fill" style="color:#16A34A;font-size:1.6rem;"></i>
+                  <p style="margin:0.5rem 0 0;font-size:0.85rem;color:var(--t500);">Thanks! We'll get back to you
+                    shortly.</p>
+                </div>
+              </div>
+
               <!-- Author widget -->
               <div class="wbeasy-blog-pg-author-widget">
                 <div class="wbeasy-blog-pg-author-av">WE</div>
