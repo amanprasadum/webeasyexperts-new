@@ -60,7 +60,7 @@
           <p class="hero-subtitle">A team of expert website designers and developers from India, serving clients
             worldwide.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-brand">Get a Free Consultentation <i
+            <a href="#contact" class="btn btn-brand">Get a Free Consultation <i
                 class="bi bi-arrow-right ms-2"></i></a>
             <a href="#portfolio" class="btn btn-outline-soft d-flex align-items-center gap-2"><i
                 class="bi bi-eye-fill text-danger"></i> View Our Work</a>
@@ -2005,7 +2005,7 @@
       <!-- Top label -->
       <div class="webeasy-calen-toprow" data-aos="fade-up">
         <div class="webeasy-calen-badge">
-          <i class="bi bi-calendar-check-fill"></i> Free Consultentation
+          <i class="bi bi-calendar-check-fill"></i> Free Consultation
         </div>
         <h2 class="webeasy-calen-heading">
           Book a <span>Free</span> 30-Min Strategy Call
@@ -2094,7 +2094,7 @@
             <div class="webeasy-calen-card-head">
               <div class="webeasy-calen-card-icon"><i class="bi bi-calendar3"></i></div>
               <div>
-                <div class="webeasy-calen-card-title">Schedule Your Free Consultentation</div>
+                <div class="webeasy-calen-card-title">Schedule Your Free Consultation</div>
                 <div class="webeasy-calen-card-sub">Pick a time — instant confirmation sent to your email</div>
               </div>
               <!-- Live badge -->
@@ -2131,7 +2131,7 @@
         <div class="wexpert-contact-badge"><i class="bi bi-envelope-fill"></i> Get In Touch</div>
         <h2 class="wexpert-contact-heading">Let's build <span class="accent accent-red">your website</span><br>the right
           way</h2>
-        <p class="wexpert-contact-sub">Free Consultentation. Fixed price. 100% satisfaction guarantee — or we keep
+        <p class="wexpert-contact-sub">Free Consultation. Fixed price. 100% satisfaction guarantee — or we keep
           working
           till you're happy.</p>
       </div>
@@ -2565,10 +2565,10 @@
           <div class="section-label mx-auto mb-4"
             style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);border:none"><i
               class="bi bi-rocket-takeoff-fill"></i> Ready to get started?</div>
-          <h2>Connect with Our Website Experts <br>For Free Consultentation</h2>
+          <h2>Connect with Our Website Experts <br>For Free Consultation</h2>
           <p>Create a powerful website with professional designers and developers from India.</p>
           <div class="d-flex flex-wrap gap-3 justify-content-center">
-            <a href="#contact" class="btn btn-brand-lg">Schedule Free Consultentation <i
+            <a href="#contact" class="btn btn-brand-lg">Schedule Free Consultation <i
                 class="bi bi-arrow-right ms-2"></i></a>
             <a href="https://wa.me/919432120437" class="btn"
               style="background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,.2);font-family:var(--display);font-weight:600;padding:.85rem 2rem;border-radius:12px;font-size:1rem;transition:background .2s"
