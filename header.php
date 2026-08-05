@@ -11,8 +11,7 @@
       <!-- <a class="navbar-brand me-4" href="#">
         <div class="brand-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>Web EASY Experts
       </a> -->
-      <!-- <a class="navbar-brand me-4 logo-shine" href="<?php //echo $base; ?>index.php"> -->
-      <a class="navbar-brand me-4 logo-shine" href="<?php echo $base; ?>">
+      <a class="navbar-brand me-4 logo-shine" href="<?php echo $base; ?>index.php">
         <img src="<?php echo $base; ?>assets/images/logo.png" srcset="" alt="Web EASY Experts" style="height:60px;object-fit:contain">
       </a>
 
