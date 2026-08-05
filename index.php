@@ -449,7 +449,7 @@
           <div class="industry-pill"><i class="bi bi-bank2"></i> Law Firms & Legal Services</div>
         </div>
         <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="40">
-          <div class="industry-pill"><i class="bi bi-calculator-fill"></i> Financial Accounting & Consultenting</div>
+          <div class="industry-pill"><i class="bi bi-calculator-fill"></i> Financial Accounting & Consulting</div>
         </div>
         <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="80">
           <div class="industry-pill"><i class="bi bi-shield-fill"></i> Insurance Companies</div>
@@ -2025,7 +2025,7 @@
           <!-- Trust pills -->
           <div class="webeasy-calen-pills">
             <div class="webeasy-calen-pill"><i class="bi bi-shield-check-fill"></i> 100% Free — No card needed</div>
-            <div class="webeasy-calen-pill"><i class="bi bi-person-check-fill"></i> Talk to a senior Consultentant</div>
+            <div class="webeasy-calen-pill"><i class="bi bi-person-check-fill"></i> Talk to a senior Consultant</div>
             <div class="webeasy-calen-pill"><i class="bi bi-clock-fill"></i> Mon–Sat · 9 AM – 8 PM IST</div>
             <div class="webeasy-calen-pill"><i class="bi bi-camera-video-fill"></i> Zoom · Google Meet · WhatsApp</div>
             <div class="webeasy-calen-pill"><i class="bi bi-file-earmark-text-fill"></i> Get a clear scope + estimate
