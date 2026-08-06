@@ -1,4 +1,9 @@
-<?php if (!isset($base)) { $base = ''; } if (!isset($home)) { $home = $base . 'index.php'; } ?>
+<?php if (!isset($base)) { $base = ''; }
+//  if (!isset($home)) { $home = $base . 'index.php'; }
+if (!isset($home)) {
+    $home = $base;
+}
+  ?>
   <!-- ══════ TOPBAR ══════ -->
   <div class="topbar">
     <strong>Serving Businesses Worldwide</strong> &nbsp;·&nbsp; Free Website Audit — <a href="<?php echo $home; ?>#contact">Claim Now
@@ -11,7 +16,8 @@
       <!-- <a class="navbar-brand me-4" href="#">
         <div class="brand-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>Web EASY Experts
       </a> -->
-      <a class="navbar-brand me-4 logo-shine" href="<?php echo $base; ?>index.php">
+      <!-- <a class="navbar-brand me-4 logo-shine" href="<?php echo $base; ?>index.php"> -->
+        <a class="navbar-brand me-4 logo-shine" href="<?php echo $home; ?>">
         <img src="<?php echo $base; ?>assets/images/logo.png" srcset="" alt="Web EASY Experts" style="height:60px;object-fit:contain">
       </a>
 

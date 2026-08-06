@@ -43,7 +43,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFD9CDQP" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <?php $base = ""; $home = "index.php"; include $base . "header.php"; ?><!-- ══════════════════════════════
+    <?php $base = ""; $home = ""; include $base . "header.php"; ?><!-- ══════════════════════════════
      § 1  HERO
 ══════════════════════════════ -->
     <section class="wab-hero">

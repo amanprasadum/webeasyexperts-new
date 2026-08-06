@@ -23,7 +23,7 @@
 
 <body>
 
-  <?php $base = "../"; $home = "../index.php"; include $base . "header.php"; ?><!-- ══════ BLOG LAYOUT ══════ -->
+  <?php $base = "../"; $home = "../"; include $base . "header.php"; ?><!-- ══════ BLOG LAYOUT ══════ -->
   <section class="wbeasy-blog-pg-layout">
     <div class="container">
       <div class="row g-4">
