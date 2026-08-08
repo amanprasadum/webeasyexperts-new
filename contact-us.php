@@ -44,7 +44,8 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <?php $base = ""; $home = "/"; include "header.php"; ?><!-- ══════════════════════════════
+<?php $base = "/"; $home = "/"; include "header.php"; ?>
+  <!-- ══════════════════════════════
      § 1  HERO — Light
 ══════════════════════════════ -->
   <section class="wct-hero">
