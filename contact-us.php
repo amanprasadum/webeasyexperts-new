@@ -343,7 +343,7 @@
   </section>
 
   <!-- Main footer -->
-  <?php include $base . "footer.php"; ?>
+  <?php include "footer.php"; ?>
 </body>
 
 </html>
