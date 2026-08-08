@@ -39,7 +39,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <?php $base = ""; $home = "index.php"; include $base . "header.php"; ?>
+  <?php $base = "/"; $home = "/"; include $base . "header.php"; ?>
 <style>
   :root {
     --red: #E53935;
