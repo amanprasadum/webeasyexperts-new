@@ -621,7 +621,7 @@
         </div><!-- /col -->
 
         <!-- ── Sidebar ── -->
-        <?php $current = "shopify-website-developer-india.php"; include "blog-sidebar.php"; ?>
+        <?php $current = "hire-a-shop⁠ify-we⁠bs⁠ite-d⁠eve⁠loper-in-indi⁠a.php"; include "blog-sidebar.php"; ?>
 
       </div>
     </div>

@@ -436,7 +436,7 @@
         </div><!-- /col -->
 
         <!-- ── Sidebar ── -->
-        <?php $current = "wordpress-developers-india.php"; include "blog-sidebar.php"; ?>
+        <?php $current = "hire-wordpress-developers-india.php"; include "blog-sidebar.php"; ?>
 
       </div>
     </div>

@@ -23,7 +23,7 @@ $wbeasy_blog_posts = [
     'color'    => '#16A34A',
     'bg'       => '#F0FFF5',
   ],
-  'wordpress-developers-india.php' => [
+  'hire-wordpress-developers-india.php' => [
     'title'    => 'WordPress Developers India: Why Businesses Worldwide Choose Indian WordPress Experts',
     'category' => 'WordPress',
     'read'     => '7 min read',
@@ -31,7 +31,7 @@ $wbeasy_blog_posts = [
     'color'    => '#2563EB',
     'bg'       => '#F0F7FF',
   ],
-  'shopify-website-developer-india.php' => [
+  'hire-a-shop⁠ify-we⁠bs⁠ite-d⁠eve⁠loper-in-indi⁠a.php' => [
     'title'    => 'Shopify Website Developer India: Why Hiring the Right Expert Can Transform Your Online Business',
     'category' => 'eCommerce',
     'read'     => '11 min read',
