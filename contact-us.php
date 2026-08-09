@@ -236,9 +236,9 @@
               <div class="wct-soc-row">
                 <a href="https://wa.me/919432120437" target="_blank" class="wa" title="WhatsApp"><i
                     class="bi bi-whatsapp"></i></a>
-                <a href="#" class="li" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="ig" title="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="fb" title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/web-easy-experts/" class="li" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/webeasyexperts/" class="ig" title="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/WebEASYExperts" class="fb" title="Facebook"><i class="bi bi-facebook"></i></a>
               </div>
             </div>
 
