@@ -2253,7 +2253,7 @@
         <div class="col-lg-7">
           <div class="row g-3 h-100">
             <div class="col-sm-6">
-              <a href="blog/hire-a-shop⁠ify-we⁠bs⁠ite-d⁠eve⁠loper-in-indi⁠a.php" class="blog-sm d-flex">
+              <a href="blog/hire-a-shopify-website-developer-in-india.php" class="blog-sm d-flex">
               <!--<a href="" class="blog-sm d-flex">-->
                 <div><span class="blog-sm-tag tag-branding">eCommerce</span></div>
                 <div class="blog-sm-title">Shopify Website Developer India: Why Hiring the Right Expert Can
