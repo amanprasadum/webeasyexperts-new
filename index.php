@@ -2231,7 +2231,8 @@
         <!-- Featured large card -->
         <div class="col-lg-5">
           <a href="blog/hire-php-developers-in-india.php" class="blog-feat d-block">
-            <div class="blog-feat-bg" style="background-image:url('https://picsum.photos/seed/php-developers-india/900/700');background-size:cover;background-position:center;"></div>
+            <!-- <div class="blog-feat-bg" style="background-image:url('https://picsum.photos/seed/php-developers-india/900/700');background-size:cover;background-position:center;"></div> -->
+            <div class="blog-feat-bg" style="background-image:url('assets/images/hire-php-developers-in-india.png');background-size:cover;background-position:center;"></div>
             <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,23,42,0.55) 0%, rgba(15,23,42,0.65) 45%, rgba(15,23,42,0.8) 75%, rgba(15,23,42,0.95) 100%);pointer-events:none;z-index:1;"></div>
             <div class="blog-feat-img" style="position:relative;z-index:2;"><i class="bi bi-code-slash"></i></div>
             <div class="blog-feat-content" style="position:relative;z-index:2;">
@@ -2308,7 +2309,7 @@
         </div>
       </div>
     </div>
-    
+
   </section>
 
   <!-- ══════ CTA ══════ -->
