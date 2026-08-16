@@ -2213,6 +2213,7 @@
 
 
   <!-- ══════ BLOG — New featured + grid layout ══════ -->
+ <!-- ══════ BLOG — New featured + grid layout ══════ -->
   <section class="section blog-section" id="blog">
     <div class="container">
       <div class="blog-section-header" data-aos="fade-up">
@@ -2228,22 +2229,20 @@
       <div class="row g-4" data-aos="fade-up">
         <!-- Featured large card -->
         <div class="col-lg-5">
-          <a href="#" class="blog-feat d-block">
-            <div class="blog-feat-bg"></div>
-            <div class="blog-feat-img"><i class="bi bi-search"></i></div>
+          <a href="blog/php-developers-india.php" class="blog-feat d-block">
+            <div class="blog-feat-bg" style="background-image:url('https://picsum.photos/seed/php-developers-india/900/700');background-size:cover;background-position:center;"></div>
+            <div class="blog-feat-img"><i class="bi bi-code-slash"></i></div>
             <div class="blog-feat-content">
-              <div class="blog-feat-tag">SEO</div>
-              <div class="blog-feat-title">How to Rank on Google in India — A 2026 Complete Guide for Small Businesses
-              </div>
-              <div class="blog-feat-desc">Local SEO, Hindi keyword research, and Google Business Profile tips that
-                actually work in the Indian market.</div>
+              <div class="blog-feat-tag">Web Development</div>
+              <div class="blog-feat-title">PHP Developers India: Why Businesses Worldwide Choose Indian PHP
+                Developers for Web Development</div>
+              <div class="blog-feat-desc">Why businesses worldwide choose PHP Developers India — hourly rate
+                guide, services, benefits, and how to choose the right development partner.</div>
               <div class="blog-feat-meta">
-                <div class="blog-feat-av">RJ</div>
-                <span>Riya Joshi</span>
+                <div class="blog-feat-av">WE</div>
+                <span>Web EASY Experts Team</span>
                 <span>·</span>
-                <span>8 min read</span>
-                <span>·</span>
-                <span>Mar 10, 2026</span>
+                <span>12 min read</span>
               </div>
             </div>
           </a>
