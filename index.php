@@ -2214,6 +2214,7 @@
 
   <!-- ══════ BLOG — New featured + grid layout ══════ -->
  <!-- ══════ BLOG — New featured + grid layout ══════ -->
+<!-- ══════ BLOG — New featured + grid layout ══════ -->
   <section class="section blog-section" id="blog">
     <div class="container">
       <div class="blog-section-header" data-aos="fade-up">
@@ -2229,10 +2230,11 @@
       <div class="row g-4" data-aos="fade-up">
         <!-- Featured large card -->
         <div class="col-lg-5">
-          <a href="blog/php-developers-india.php" class="blog-feat d-block">
+          <a href="blog/hire-php-developers-in-india.php" class="blog-feat d-block">
             <div class="blog-feat-bg" style="background-image:url('https://picsum.photos/seed/php-developers-india/900/700');background-size:cover;background-position:center;"></div>
             <div class="blog-feat-img"><i class="bi bi-code-slash"></i></div>
-            <div class="blog-feat-content">
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.15) 35%, rgba(15,23,42,0.65) 65%, rgba(15,23,42,0.92) 100%);pointer-events:none;"></div>
+            <div class="blog-feat-content" style="position:relative;z-index:2;">
               <div class="blog-feat-tag">Web Development</div>
               <div class="blog-feat-title">PHP Developers India: Why Businesses Worldwide Choose Indian PHP
                 Developers for Web Development</div>
@@ -2307,7 +2309,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- ══════ CTA ══════ -->
   <section class="cta-section">
