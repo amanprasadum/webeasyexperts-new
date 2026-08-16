@@ -112,7 +112,7 @@
             <div class="wbeasy-blog-pg-body">
 
               <div class="blog-img">
-                <img src="../assets/images/best-tips.png" alt="PHP Developers India" srcset=""
+                <img src="../assets/images/hire-php-developer-in-india.png" alt="PHP Developers India" srcset=""
                   class="img-fluid">
               </div>
 
