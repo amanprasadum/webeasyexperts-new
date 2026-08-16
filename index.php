@@ -2232,17 +2232,17 @@
         <div class="col-lg-5">
           <a href="blog/hire-php-developers-in-india.php" class="blog-feat d-block">
             <div class="blog-feat-bg" style="background-image:url('https://picsum.photos/seed/php-developers-india/900/700');background-size:cover;background-position:center;"></div>
-            <div class="blog-feat-img"><i class="bi bi-code-slash"></i></div>
-            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.15) 35%, rgba(15,23,42,0.65) 65%, rgba(15,23,42,0.92) 100%);pointer-events:none;"></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,23,42,0.55) 0%, rgba(15,23,42,0.65) 45%, rgba(15,23,42,0.8) 75%, rgba(15,23,42,0.95) 100%);pointer-events:none;z-index:1;"></div>
+            <div class="blog-feat-img" style="position:relative;z-index:2;"><i class="bi bi-code-slash"></i></div>
             <div class="blog-feat-content" style="position:relative;z-index:2;">
               <div class="blog-feat-tag">Web Development</div>
-              <div class="blog-feat-title">PHP Developers India: Why Businesses Worldwide Choose Indian PHP
+              <div class="blog-feat-title" style="text-shadow:0 2px 8px rgba(0,0,0,0.6);">PHP Developers India: Why Businesses Worldwide Choose Indian PHP
                 Developers for Web Development</div>
-              <div class="blog-feat-desc">Why businesses worldwide choose PHP Developers India — hourly rate
+              <div class="blog-feat-desc" style="color:#E2E8F0;text-shadow:0 1px 4px rgba(0,0,0,0.6);">Why businesses worldwide choose PHP Developers India — hourly rate
                 guide, services, benefits, and how to choose the right development partner.</div>
-              <div class="blog-feat-meta">
+              <div class="blog-feat-meta" style="position:relative;z-index:2;">
                 <div class="blog-feat-av">WE</div>
-                <span>Web EASY Experts Team</span>
+                <span style="text-shadow:0 1px 4px rgba(0,0,0,0.6);">Web EASY Experts Team</span>
                 <span>·</span>
                 <span>12 min read</span>
               </div>
