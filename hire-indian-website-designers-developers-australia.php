@@ -696,7 +696,7 @@
           <span class="city-page-eyebrow"><i class="bi bi-geo-alt"></i>AUSTRALIA-WIDE WEB DESIGN & DEVELOPMENT</span>
           <h1>Indian Website Designers & Developers  <span class="city-page-highlight">Serving Australia</span></h1>
           <h2>Hire Skilled Indian Websites Developers &amp; Designers for Your Australian Business</h2>
-          <p>Web EASY Experts’ skilled team of designers and developers from India is a one-step choice for building lead generating website for the Australian business owners at competitive prices to small or medium-sized businesses.</p>
+          <p>We scale your offline business with premium web design and development from our skilled tech hub in India. From bespoke WordPress development to scalable e-commerce systems, our designers and developers build fast, high-performance, SEO-friendly websites to turn clicks into local customers.</p>
           <div class="city-page-hero-actions">
             <span class="city-page-feature-card" style="width:auto;"><i class="bi bi-people-fill"></i><span>10+ Years Experience</span></span>
             <span class="city-page-feature-card" style="width:auto;"><i class="bi bi-award-fill"></i><span>500+ Websites Delivered</span></span>
