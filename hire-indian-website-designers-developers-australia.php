@@ -1137,6 +1137,41 @@
     </div>
   </div>
   <!-- ===================================================================================== -->
+    <!-- ══════════════════════════════
+     § 4  CTA — Single dark section
+══════════════════════════════ -->
+  <section class="wct-cta">
+    <div class="container">
+      <div class="wct-cta-wrap" data-aos="fade-up" data-aos-duration="800">
+
+        <div>
+          <div class="wct-chip"
+            style="color:#FF8A80;background:rgba(229,57,53,.1);border:1px solid rgba(229,57,53,.28);">
+            <span class="dot" style="background:var(--red);"></span> Free Consultation
+          </div>
+          <h2>Not Sure Where to <em>Start</em></h2>
+          <p class="mt-2">Book a free 30-minute call. No pressure, no commitment — just a friendly conversation about
+            your business goals.</p>
+        </div>
+
+        <div class="wct-cta-btns">
+          <a href="https://wa.me/919432120437" target="_blank" class="wct-cta-btn">
+            <div class="wct-cta-btn-ico g"><i class="bi bi-whatsapp"></i></div>
+            <div><strong>Chat on WhatsApp</strong><span>Fastest response</span></div>
+          </a>
+          <a href="tel:+919432120437" class="wct-cta-btn">
+            <div class="wct-cta-btn-ico r"><i class="bi bi-telephone-fill"></i></div>
+            <div><strong>+91 94321 20437</strong><span>Call us directly</span></div>
+          </a>
+          <a href="mailto:webeasyexperts@gmail.com" class="wct-cta-btn">
+            <div class="wct-cta-btn-ico b"><i class="bi bi-envelope-fill"></i></div>
+            <div><strong>webeasyexperts@gmail.com</strong><span>For detailed inquiries</span></div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
   <!-- Main footer -->
   <?php include $base . "footer.php"; ?>
 </body>
