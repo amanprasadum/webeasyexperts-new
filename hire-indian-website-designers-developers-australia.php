@@ -693,8 +693,8 @@
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
-          <span class="city-page-eyebrow"><i class="bi bi-geo-alt"></i>Australia Wide Web Design</span>
-          <h1>Build a Website That <span class="city-page-highlight">Turns Visitors into Customers</span></h1>
+          <span class="city-page-eyebrow"><i class="bi bi-geo-alt"></i>AUSTRALIA-WIDE WEB DESIGN & DEVELOPMENT</span>
+          <h1>Indian Website Designers & Developers  <span class="city-page-highlight">Serving Australia</span></h1>
           <h2>Hire Skilled Indian Websites Developers &amp; Designers for Your Australian Business</h2>
           <p>Web EASY Experts’ skilled team of designers and developers from India is a one-step choice for building lead generating website for the Australian business owners at competitive prices to small or medium-sized businesses.</p>
           <div class="city-page-hero-actions">
