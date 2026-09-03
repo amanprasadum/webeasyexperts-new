@@ -5,7 +5,7 @@
 <head>
    <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>amanWeb Design &amp; Development Services in Australia | Web EASY Experts</title>
+<title>Web Design &amp; Development Services in Australia | Web EASY Experts</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
