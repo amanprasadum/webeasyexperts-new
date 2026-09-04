@@ -695,7 +695,8 @@
         <div class="col-lg-6">
           <span class="city-page-eyebrow"><i class="bi bi-geo-alt"></i>AUSTRALIA-WIDE WEB DESIGN & DEVELOPMENT</span>
           <h1>Indian Website Designers & Developers  <span class="city-page-highlight">Serving Australia</span></h1>
-          <h2>Hire Skilled Indian Websites Developers &amp; Designers for Your Australian Business</h2>
+          <h2>Professional Websites for Australian Businesses — Built by Our India-Based Team</h2>
+          <!-- Hire Skilled Indian Websites Developers &amp; Designers for Your Australian Business -->
           <p>We scale your offline business with premium web design and development from our skilled tech hub in India. From bespoke WordPress development to scalable e-commerce systems, our designers and developers build fast, high-performance, SEO-friendly websites to turn clicks into local customers.</p>
           <div class="city-page-hero-actions">
             <span class="city-page-feature-card" style="width:auto;"><i class="bi bi-people-fill"></i><span>10+ Years Experience</span></span>
